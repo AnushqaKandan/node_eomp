@@ -1,7 +1,8 @@
 <template>   
     <nav class="navbar navbar-expand-lg fixed-top shadow">
                 <div class="container-fluid">
-                    <img src="https://c0dingforfun.github.io/portfolioimg/Images/Logo/Logo.png" alt="My Logo" loading="lazy">
+                    <!-- <img src="https://c0dingforfun.github.io/portfolioimg/Images/Logo/Logo.png" alt="My Logo" loading="lazy"> -->
+                     kbjvkjbv
                     <button class="navbar-toggler mx-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">                    
                       <span class="text-white p-2" style="font-size:30px;">&#9776;</span>                      
                     </button>
@@ -13,22 +14,16 @@
                       <div class="offcanvas-body text-center">                   
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 p-3 f-3">                     
                           <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#home">Home</a>
+                            <a class="nav-link" aria-current="page" href="">Home</a>
                           </li>
                           <li class="nav-item">
                             <a class="nav-link" href="#about">About</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="#resume">Resume</a>
+                            <a class="nav-link" href="#resume">Products</a>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="#projects">Projects</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#testimonials">Testimonials</a>
-                          </li>
-                          <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
+                            <a class="nav-link" href="#projects">Contact</a>
                           </li>                     
                         </ul>                    
                       </div>
@@ -42,7 +37,7 @@ export default {
 </script>
 <style scoped>
     nav {
-      background-color:#229668;
+      background-color:grey;
     }
 
     nav a {
@@ -57,8 +52,8 @@ export default {
         text-shadow:4px 4px black;
     }
     nav img{
-      width:60px;
-      height:60px;
+      width:50px;
+      height:50px;
     }
 
 
