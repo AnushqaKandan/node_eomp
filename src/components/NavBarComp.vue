@@ -14,16 +14,16 @@
                       <div class="offcanvas-body text-center">                   
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 p-3 f-3">                     
                           <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="">Home</a>
+                            <router-link class="nav-link" aria-current="page" to="/">Home</router-link>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
+                            <router-link class="nav-link" href="#about">About</router-link>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="#resume">Products</a>
+                            <router-link class="nav-link" href="#resume">Products</router-link>
                           </li>
                           <li class="nav-item">
-                            <a class="nav-link" href="#projects">Contact</a>
+                            <router-link class="nav-link" href="#projects">Contact</router-link>
                           </li>                     
                         </ul>                    
                       </div>
