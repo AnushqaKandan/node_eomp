@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    kjbervllbe
+    
   </div>
 </template>
 
@@ -22,4 +22,6 @@ export default {
     color:aliceblue;
     background-color: black;
   }
+
+  
 </style>
