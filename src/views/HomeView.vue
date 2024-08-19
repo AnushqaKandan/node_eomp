@@ -1,5 +1,6 @@
 <template>
   <div class="home">
+    kjbervllbe
   </div>
 </template>
 
@@ -13,3 +14,12 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .home {
+    width:100vw;
+    height:100vh;
+    color:aliceblue;
+    background-color: black;
+  }
+</style>
