@@ -1,7 +1,7 @@
 import { createStore } from 'vuex';
-import {axios} from 'axios';
+import axios from 'axios';
 
-const apiURL = 'https://node-eomp-u5mv.onrender.com'
+const apiURL = 'https://node-eomp-u5mv.onrender.com/'
 
 export default createStore({
   state: {
@@ -16,14 +16,13 @@ export default createStore({
   },
   actions: {
     async getProducts ({commit}) {
-      try {
-        let {results} = await axios.get(`${apiURL}products`);
-        console.log(results);
-          commit('setProducts',results)
-      }
-      catch (error) {
-          console.log(error);      
-      }
+      // try {
+        let {data} = await axios.get(`${apiURL}products`);
+          commit('setProducts',data.results)
+      // }
+      // catch (error) {
+      //     console.log(error);      
+      // }
     }
     
   },

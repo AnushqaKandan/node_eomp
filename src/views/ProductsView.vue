@@ -1,6 +1,6 @@
 <template >
     <div class="container mt-5">
-        <div class="row mt-5" v-for="product in products()" :key="product.id">
+        <div class="row" v-for="product in products()" :key="product.prodID">
             <span>{{ product.prodID }}</span> /
             <span>{{ product.prodName }}</span> /
             <span>{{ product.quantity }}</span> /
@@ -24,6 +24,6 @@ export default {
     },
 }
 </script>
-<style lang="">
+<style scoped>
     
 </style>
