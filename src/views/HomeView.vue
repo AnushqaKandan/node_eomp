@@ -64,7 +64,6 @@ export default {
   }
   #carouselExample{
     position:relative;
-
     width: 100vw;
     height:20vh;
   }
