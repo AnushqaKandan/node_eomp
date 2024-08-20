@@ -17,13 +17,13 @@
                             <router-link class="nav-link" aria-current="page" to="/">Home</router-link>
                           </li>
                           <li class="nav-item">
-                            <router-link class="nav-link" href="#about">About</router-link>
+                            <router-link class="nav-link" to="/about">About</router-link>
                           </li>
                           <li class="nav-item">
-                            <router-link class="nav-link" href="#resume">Products</router-link>
+                            <router-link class="nav-link" to="/products">Products</router-link>
                           </li>
                           <li class="nav-item">
-                            <router-link class="nav-link" href="#projects">Contact</router-link>
+                            <router-link class="nav-link" to="/contact">Contact</router-link>
                           </li>                     
                         </ul>                    
                       </div>
