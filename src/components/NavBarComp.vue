@@ -6,9 +6,9 @@
                     <button class="navbar-toggler mx-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">                    
                       <span class="text-white p-2" style="font-size:30px;">&#9776;</span>                      
                     </button>
-                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="width:100%;background-color: rgb(0,0,0,0.8);">
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="width:50%;background-color: rgb(0,0,0,0.8);">
                       <div class="offcanvas-header">
-                        <img src="https://c0dingforfun.github.io/portfolioimg/Images/Logo/Logo.png" alt="My Logo" loading="lazy">
+                        <h1>MENU</h1>
                         <button type="button" class="btn-close bg-white pt-2" data-bs-dismiss="offcanvas" aria-label="Close" ></button>
                       </div>
                       <div class="offcanvas-body text-center">                   
@@ -38,11 +38,12 @@ export default {
 <style scoped>
     nav {
       background-color:transparent;
+      font-family: 'Times New Roman', Times, serif;
     }
     nav a {
         font-weight: bold;
         font-size:20px;
-        color:white;
+        color:aliceblue;
         text-decoration: none;
         transition: 1s;
     }
@@ -54,6 +55,8 @@ export default {
       width:50px;
       height:50px;
     }
-
+    h1{
+      color:blue
+    }
 
 </style>

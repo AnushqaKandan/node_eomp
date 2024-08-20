@@ -1,10 +1,10 @@
 <template >
     <div class="container mt-5">
         <div class="row" v-for="product in products()" :key="product.prodID">
-            <span>{{ product.prodID }}</span> /
-            <span>{{ product.prodName }}</span> /
-            <span>{{ product.quantity }}</span> /
-            <span>{{ product.Category }}</span> /
+            <span>{{ product.prodID }}</span> 
+            <span>{{ product.prodName }}</span>
+            <span>{{ product.quantity }}</span>
+            <span>{{ product.Category }}</span>
             <span>{{ product.prodUrl }}</span> 
         </div>
     </div>

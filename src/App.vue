@@ -18,13 +18,17 @@ import NavBarComp from './components/NavBarComp.vue';
 <style>
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   overflow-x: hidden;
-  background: green;
+  background: gray;
+  font-family: "Comic Neue", cursive;
+  font-weight: 400;
+  font-style: normal;
 }
+
 
 </style>
