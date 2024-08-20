@@ -16,13 +16,13 @@ export default createStore({
   },
   actions: {
     async getProducts ({commit}) {
-      // try {
+      try {
         let {data} = await axios.get(`${apiURL}products`);
           commit('setProducts',data.results)
-      // }
-      // catch (error) {
-      //     console.log(error);      
-      // }
+      }
+      catch (error) {
+        console.log(error);      
+      }
     }
     
   },

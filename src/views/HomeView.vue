@@ -42,7 +42,7 @@
   <section>
     <div>
       <div class="row">
-        
+
       </div>
     </div>
   </section>
@@ -54,7 +54,6 @@ export default {
   component:{
     NavBarComp
   }
-  
 }
 </script>
 

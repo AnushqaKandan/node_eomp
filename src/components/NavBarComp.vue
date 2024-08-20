@@ -56,7 +56,7 @@ export default {
       height:50px;
     }
     h1{
-      color:blue
+      color:rgba(240, 236, 236, 0.6)
     }
 
 </style>
