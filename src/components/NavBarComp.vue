@@ -1,8 +1,8 @@
 <template>   
-    <nav class="navbar navbar-expand-lg fixed-top shadow">
+    <nav class="navbar navbar-expand-lg shadow">
                 <div class="container-fluid">
                     <!-- <img src="https://c0dingforfun.github.io/portfolioimg/Images/Logo/Logo.png" alt="My Logo" loading="lazy"> -->
-                     kbjvkjbv
+                     LOGO
                     <button class="navbar-toggler mx-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">                    
                       <span class="text-white p-2" style="font-size:30px;">&#9776;</span>                      
                     </button>
@@ -37,7 +37,7 @@ export default {
 </script>
 <style scoped>
     nav {
-      background-color:grey;
+      background-color:transparent;
     }
 
     nav a {

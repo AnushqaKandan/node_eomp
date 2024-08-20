@@ -1,20 +1,34 @@
 <template>
-  <Navbar-Comp/>
-  <div class="home">
+  <section>
     <div>
-      <div id="carouselExample mt-5" class="carousel slide">
+      <Navbar-Comp/>
+    </div>
+    <div>
+      <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <!-- <img src="..." class="d-block w-100" alt="..."> -->
-             lknflevebrlbergbl
+             kjvb
           </div>
           <div class="carousel-item">
             <!-- <img src="..." class="d-block w-100" alt="..."> -->
-             lknflevebrlbergbl
+             kjfebjkec
           </div>
           <div class="carousel-item">
             <!-- <img src="..." class="d-block w-100" alt="..."> -->
-             lknflevebrlbergbl
+             kjewbc
+          </div>
+          <div class="carousel-item">
+            <!-- <img src="..." class="d-block w-100" alt="..."> -->
+             kjewbc
+          </div>
+          <div class="carousel-item">
+            <!-- <img src="..." class="d-block w-100" alt="..."> -->
+             kjewbc
+          </div>
+          <div class="carousel-item">
+            <!-- <img src="..." class="d-block w-100" alt="..."> -->
+             kjewbc
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -27,7 +41,8 @@
         </button>
       </div>
     </div>
-  </div>
+  </section>
+
 </template>
 
 <script>
@@ -44,10 +59,12 @@ export default {
   .home {
     width:100vw;
     height:100vh;
-    color:aliceblue;
+    color:red;
     /* background-color: black; */
   }
-  .carouselExample{
+  #carouselExample{
+    position:relative;
+
     width: 100vw;
     height:20vh;
   }
