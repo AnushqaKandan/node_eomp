@@ -8,12 +8,15 @@ export default createStore({
   getters: {
   },
   mutations: {
+    setProducts(state,payload){
+      state.products = payload;
+    }
   },
   actions: {
     async getProducts ({commit}) {
       let [data] = axios.get('https://node-eomp-u5mv.onrender.com/products');
       console.log(data);
-      
+      commit('setProducts',products)
     }
   },
   modules: {
