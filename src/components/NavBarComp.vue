@@ -39,7 +39,6 @@ export default {
     nav {
       background-color:transparent;
     }
-
     nav a {
         font-weight: bold;
         font-size:20px;
