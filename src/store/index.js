@@ -14,10 +14,17 @@ export default createStore({
   },
   actions: {
     async getProducts ({commit}) {
-      let [data] = axios.get('https://node-eomp-u5mv.onrender.com/products');
-      console.log(data);
-      commit('setProducts',products)
+      try {
+        let [data] = await axios.get('https://node-eomp-u5mv.onrender.com/products');
+        console.log(data);
+        commit('setProducts',products)
+      }
+      catch (error) {
+          console.log(error);
+          
+      }
     }
+    
   },
   modules: {
   }
