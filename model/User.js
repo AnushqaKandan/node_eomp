@@ -115,7 +115,7 @@ fetchUser(req, res) {
          if (err) throw new Error('To delete a user, please review your delete query.')
          res.json({
         status: res.statusCode,
-        msg: "A user\'s information was removed."
+        msg: "User deleted successfully"
         })
       })
     } catch(e) {
@@ -151,16 +151,8 @@ fetchUser(req, res) {
                 res.json({
                     status: res.statusCode,
                     token,
-                    user: {
-                        userID: user.userID,
-                        firstName: user.firstName,
-                        lastName: user.lastName,
-                        userAge: user.userAge,
-                        Gender: user.Gender,
-                        userRole: user.userRole,
-                        emailAdd: user.emailAdd,
-                        userProfile: user.userProfile,
-                    },
+                     msg: 'You have successfully logged in.'
+                    
                 });
             } else {
                 res.status(401).json({
