@@ -44,23 +44,40 @@ fetchUser(req, res) {
 }
 
  async registerUser(req, res) {
-    try{
+    try {
         let data = req.body
-        if(data.userPass)
-         data.userPass = await hash(data.userPass, 12)
-     // Payload
-     let user = {
-         emailAdd: data.emailAdd,
-         userPass: data.userPass
-     }
-     let strQry = `
-     INSERT INTO Users
-     SET ?; `
-     db.query(strQry, [data], (err) => {})
-     } catch(e) {
- 
-     }
- }
+        data.userPass = await hash(data.userPass, 12)
+        // Payload
+        let user = {
+            emailAdd: data.emailAdd,
+            userPass: data.userPass
+        }
+        let strQry = `
+    INSERT INTO Users
+    SET ?;
+    `
+        db.query(strQry, [data], (err) => {
+            if (err) {
+                res.json({
+                    status: res.statusCode,
+                    msg: 'This email has already been taken'
+                })
+            } else {
+                const token = createToken(user)
+                res.json({
+                    token,
+                    msg: 'You are now registered.'
+                })
+            }
+        })
+    } catch (e) {
+        res.json({
+            status: 404,
+            err: e.message
+        })
+    }
+}
+
 
  async updateUser(req, res) {
     try{
@@ -110,48 +127,55 @@ fetchUser(req, res) {
  }
 
  async login(req, res) {
-    try{
-        const{ emailAdd, userPass } = req.body
-        const strQry = ` SELECT userID, firstName, lastName, userAge, Gender, userRole, emailAdd, userPass, userProfile 
-        FROM Users
-        WHERE emailAdd = '${emailAdd}';
-        `
-        db.query(strQry, async(err, result) => {
-            if(err) throw new Error('To login, please review your query')
-            if(!result?.length) {
-                res.json(
-                    {
-                        status: 401,
-                        msg: 'You provided a wrong email.'
-                    }
-                )
-            } else{
-                const isValidPass = await compare(userPass, result[0].userPass)
-                if(isValidPass) {
-                    const token = createToken({
-                        emailAdd,
-                        userPass
-                    })
-                    res.json({
-                        status: res.statusCode,
-                        token,
-                        result: result[0]
-                    })
-                } else {
-                    res.json({
-                        status: 401,
-                        msg: 'Invalid password or you have not registered'
-                    })
-                }
+    try {
+        const { emailAdd, userPass } = req.body;
+        const strQry = `SELECT userID, firstName, lastName, userAge, Gender, userRole, emailAdd, userPass, userProfile 
+                        FROM Users WHERE emailAdd = ?;`;
+        db.query(strQry, [emailAdd], async (err, result) => {
+            if (err) throw new Error('Unable to process login request.');
+            if (result.length === 0) {
+                return res.status(401).json({
+                    status: 401,
+                    msg: 'Incorrect email or password.',
+                });
             }
-        })
-    } catch(e) {
-        res.json({
+
+            const user = result[0];
+            const isValidPass = await compare(userPass, user.userPass);
+            if (isValidPass) {
+                const token = createToken({
+                    id: user.userID,
+                    emailAdd: user.emailAdd,
+                    userRole: user.userRole,
+                });
+                res.json({
+                    status: res.statusCode,
+                    token,
+                    user: {
+                        userID: user.userID,
+                        firstName: user.firstName,
+                        lastName: user.lastName,
+                        userAge: user.userAge,
+                        Gender: user.Gender,
+                        userRole: user.userRole,
+                        emailAdd: user.emailAdd,
+                        userProfile: user.userProfile,
+                    },
+                });
+            } else {
+                res.status(401).json({
+                    status: 401,
+                    msg: 'Incorrect email or password.',
+                });
+            }
+        });
+    } catch (e) {
+        res.status(404).json({
             status: 404,
-            msg: e.message
-         })
+            msg: e.message,
+        });
     }
- }
+}
 }
 
 export{
