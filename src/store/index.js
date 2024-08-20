@@ -17,7 +17,7 @@ export default createStore({
   actions: {
     async getProducts ({commit}) {
       try {
-        let {results} = await axios.get(`https://node-eomp-u5mv.onrender.com/products`);
+        let {results} = await axios.get(`${apiURL}products`);
         console.log(results);
           commit('setProducts',results)
       }
