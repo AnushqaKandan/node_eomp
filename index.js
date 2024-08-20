@@ -28,7 +28,7 @@ app.use(
     cors()
 )
 
-app.get('^/$|/eShop', (req, res) => {
+app.get('^/$|/NodeEOMP', (req, res) => {
     res.status(200).sendFile(path.resolve('./static/html/index.html'))
 })
 

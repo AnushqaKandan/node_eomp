@@ -1,9 +1,9 @@
 import { connection as db } from '../config/index.js'
-import { hash } from 'bcrypt'
+
 class Products{
     fetchProducts(req, res) {
         try{
-            const strQry = `SELECT prodID, prodName, quantity, ammount, Category, prodURL
+            const strQry = `SELECT prodID, prodName, quantity, amount, Category, prodURL
             FROM Products;`
             db.query(strQry, (err, results) => {
                 // `Unable to fetch all Products`
@@ -22,33 +22,9 @@ class Products{
           }
     }
 
-recentProducts(req, res) {
-    try{
-        const strQry = `SELECT prodID, prodName, quantity, ammount, Category, prodURL
-        FROM Products
-        ORDER BY prodID DESC
-        LIMIT 5;`
-        db.query(strQry, (err, results) => {
-            // `Unable to fetch all Products`
-            if(err) throw new Error('Unable to fetch all products.')
-           res.json({
-        status: res.statusCode,
-        results
-        })
-    
-    })
-
-    } catch(e){
-        res.json({
-            status: 404,
-            msg: e.message
-         })
-    }
-}
-
     fetchProduct(req, res) {
         try {
-            const strQry = `SELECT prodID, prodName, quantity, ammount, Category, prodURL
+            const strQry = `SELECT prodID, prodName, quantity, amount, Category, prodURL
             FROM Products 
             WHERE prodID = ${req.params.id};`
             
