@@ -1,9 +1,6 @@
 <template>
   <section>
     <div>
-      <Navbar-Comp/>
-    </div>
-    <div>
       <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner">
           <div class="carousel-item active">

@@ -1,6 +1,9 @@
 <template>
-  <nav-bar-comp/>
-  <router-view/>
+  <div>
+    <NavBarComp>
+    </NavBarComp>
+    <router-view/>
+  </div>
 </template>
 
 <script>
@@ -21,7 +24,7 @@ import NavBarComp from './components/NavBarComp.vue';
   text-align: center;
   color: #2c3e50;
   overflow-x: hidden;
-  background: black;
+  background: green;
 }
 
 </style>
