@@ -5,7 +5,7 @@ import {compare, hash } from 'bcrypt'
 class Users {
     fetchUsers(req, res) {
         try{
-            const strQry = `SELECT userID, firstName, lastName, userage, Gender, userRole, emailAdd, userPass, userProfile FROM Users;`
+            const strQry = `SELECT userID, firstName, lastName, userAge, Gender, userRole, emailAdd, userPass, userProfile FROM Users;`
             db.query(strQry, (err, result) => {
                 if(err) throw new Error('Issue when retrieving all users.')
                res.json({
@@ -23,7 +23,7 @@ class Users {
     }
 fetchUser(req, res) {
     try {
-        const strQry = `SELECT userID, firstName, lastName, userage, Gender, userRole, emailAdd, userPass, userProfile
+        const strQry = `SELECT userID, firstName, lastName, userAge, Gender, userRole, emailAdd, userPass, userProfile
         FROM Users WHERE userID = ${req.params.id};`
         
         db.query(strQry, (err, result) => {
@@ -112,7 +112,7 @@ fetchUser(req, res) {
  async login(req, res) {
     try{
         const{ emailAdd, userPass } = req.body
-        const strQry = ` SELECT userID, firstName, lastName, userage, Gender, userRole, emailAdd, userPass, userProfile 
+        const strQry = ` SELECT userID, firstName, lastName, userAge, Gender, userRole, emailAdd, userPass, userProfile 
         FROM Users
         WHERE emailAdd = '${emailAdd}';
         `
