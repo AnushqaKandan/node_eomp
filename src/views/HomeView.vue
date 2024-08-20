@@ -39,7 +39,13 @@
       </div>
     </div>
   </section>
-
+  <section>
+    <div>
+      <div class="row">
+        
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -55,9 +61,7 @@ export default {
 <style scoped>
   .home {
     width:100vw;
-    height:100vh;
-    color:red;
-    /* background-color: black; */
+    height:auto;
   }
   #carouselExample{
     position:relative;
