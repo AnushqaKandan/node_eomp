@@ -8,27 +8,27 @@
         <div class="carousel-inner">
           <div class="carousel-item active">
             <!-- <img src="..." class="d-block w-100" alt="..."> -->
-             kjvb
+             Hi
           </div>
           <div class="carousel-item">
             <!-- <img src="..." class="d-block w-100" alt="..."> -->
-             kjfebjkec
+             Hey
           </div>
           <div class="carousel-item">
             <!-- <img src="..." class="d-block w-100" alt="..."> -->
-             kjewbc
+             Hello
           </div>
           <div class="carousel-item">
             <!-- <img src="..." class="d-block w-100" alt="..."> -->
-             kjewbc
+             Molo
           </div>
           <div class="carousel-item">
             <!-- <img src="..." class="d-block w-100" alt="..."> -->
-             kjewbc
+             Bonjour
           </div>
           <div class="carousel-item">
             <!-- <img src="..." class="d-block w-100" alt="..."> -->
-             kjewbc
+             Hola
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
