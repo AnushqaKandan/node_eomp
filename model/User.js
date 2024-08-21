@@ -151,7 +151,7 @@ fetchUser(req, res) {
                 res.json({
                     status: res.statusCode,
                     token,
-                     msg: 'You have successfully logged in.'
+                     user
                     
                 });
             } else {
