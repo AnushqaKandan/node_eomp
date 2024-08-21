@@ -4,8 +4,23 @@
         
         <div class="carousel-inner" >
           <div class="carousel-item" v-for="(slide,index) in carousel()" :key="index" :class="{'active':index==0}">
-            <!-- style="background-Image: url(`${slide.background}`)" -->
-           <img :src="slide.image">
+            <!-- style="{background-Image: url(`${slide.background}`)}" -->
+             <div class="slider row">
+                <div class="col-lg-6 col-md-6 col-sm-12">
+                  <div>
+                    <h5>{{ slide.brand }}</h5>
+                  </div>
+                  <div>
+                    <h2><b>{{ slide.type }}</b></h2>
+                  </div>
+                  <div>
+                    <h1>{{ slide.category }}</h1>
+                  </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-sm-12">
+                  <img :src="slide.image">
+                </div>
+             </div>
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -19,7 +34,7 @@
       </div>
 
   </section>
-  <section>
+  <!-- <section>
     <div>
       <div class="row">
         hi
@@ -28,12 +43,12 @@
   </section>
   <section class="b1">
 
-  </section>
+  </section> -->
 </template>
 
 <script>
 export default {
-  props:['background'],
+  // props:[background=string],
   methods:{
     getData(){
       return this.$store.dispatch('getData');
@@ -55,13 +70,22 @@ export default {
   }
   #carouselExample{
     width: 100vw;
-    height:400px;
+    height:500px;
   }
   .carousel-item img{
     object-fit:contain;
     height:300px;
     /* transform: rotateY(100deg);
     perspective: 300px; */
+  }
+  .slider{
+    width:100vw;
+    display:flex;
+    align-content: center;
+  }
+  .slider h1{
+    z-index:0;
+    font-size:12vw;
   }
   .b1{
     margin:auto;
