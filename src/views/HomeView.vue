@@ -17,6 +17,9 @@
                   <div>
                     <h1>{{ slide.category }}</h1>
                   </div>
+                  <div>
+                    <router-link to="/products">View More</router-link>
+                  </div>
                 </div>
                 <div class="col-lg-6 col-sm-12">
                   <img :src="slide.image">
@@ -78,6 +81,7 @@ export default {
     height:400px;
   }
   .slider{
+    margin-top:5vh;
     width:100vw;
     display:flex;
     align-content: center;
@@ -93,6 +97,19 @@ export default {
     height:300px;
     border-radius:10%;
   }
-  
+  a{
+    width:6vw;
+    height:6vw;
+    border-radius:10%;
+    padding:1vw;
+    color:whitesmoke;
+    background: rgb(3, 108, 213);
+    transition:0.5s;
+    text-decoration: none;
+  }
+  a:hover{
+    color:white;
+    background: rgb(2, 21, 40);
+  }
 
 </style>
