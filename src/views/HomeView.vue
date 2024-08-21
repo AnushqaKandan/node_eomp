@@ -46,6 +46,9 @@
       </div>
     </div>
   </section>
+  <section class="b1">
+
+  </section>
 </template>
 
 <script>
@@ -66,6 +69,13 @@ export default {
     position:relative;
     width: 100vw;
     height:60vh;
+  }
+  .b1{
+    margin:auto;
+    background:rgb(26, 26, 26);
+    width:99vw;
+    height:300px;
+    border-radius:10%;
   }
 
 </style>

@@ -38,7 +38,6 @@ export default {
 <style scoped>
     nav {
       background-color:transparent;
-      font-family: 'Times New Roman', Times, serif;
     }
     nav a {
         font-weight: bold;
