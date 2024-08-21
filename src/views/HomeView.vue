@@ -1,10 +1,11 @@
 <template>
   <section>
     <div>
-      <div id="carouselExample" class="carousel slide" v-for="slide in carousel()" :key="slide">
+      <div id="carouselExample" class="carousel slide" v-for="(slide,index) in carousel()" :key="slide" :class="{'active':index==0}">
         <div class="carousel-inner">
           <div class="carousel-item active">
-           <img :src="slide.brand" class="d-block w-100" >
+            {{ slide.brand }}
+           <img :src="slide.image" class="d-block w-100" >
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -38,14 +39,14 @@ export default {
   },
   methods:{
     getData(){
-      this.$store.dispatch('getData');
+      return this.$store.dispatch('getData');
     },
     carousel(){
-      this.$store.state.carousel
+      return this.$store.state.carousel
     }
   },
   mounted() {
-    this.getData();
+    this.getData;
   },
 }
 </script>
@@ -59,6 +60,7 @@ export default {
     position:relative;
     width: 100vw;
     height:60vh;
+    background-color:red ;
   }
   .b1{
     margin:auto;
