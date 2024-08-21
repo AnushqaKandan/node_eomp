@@ -6,7 +6,8 @@
           <div class="carousel-item" v-for="(slide,index) in carousel()" :key="index" :class="{'active':index==0}">
             <!-- style="{background-Image: url(`${slide.background}`)}" -->
              <div class="slider row">
-                <div class="col-lg-6 col-md-6 col-sm-12">
+              <div class="col-lg-1 col-md-1 col-sm-12"></div>
+                <div class="col-lg-5 col-md-5 col-sm-12">
                   <div>
                     <h5>{{ slide.brand }}</h5>
                   </div>
@@ -17,7 +18,7 @@
                     <h1>{{ slide.category }}</h1>
                   </div>
                 </div>
-                <div class="col-sm-6 col-md-6 col-sm-12">
+                <div class="col-lg-6 col-sm-12">
                   <img :src="slide.image">
                 </div>
              </div>
@@ -74,9 +75,7 @@ export default {
   }
   .carousel-item img{
     object-fit:contain;
-    height:300px;
-    /* transform: rotateY(100deg);
-    perspective: 300px; */
+    height:400px;
   }
   .slider{
     width:100vw;
