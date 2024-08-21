@@ -7,8 +7,8 @@ export default createStore({
   state: {
     products:null,
     carousel:null,
-    news:null
-
+    news:null,
+    contact:null
   },
   getters: {
   },
@@ -21,6 +21,9 @@ export default createStore({
     },
     setNews(state,payload){
       state.news = payload;
+    },
+    setContact(state,payload){
+      state.contact = payload;
     }
   },
   actions: {
@@ -28,9 +31,10 @@ export default createStore({
       try {
         let {data} = await axios.get('https://c0dingforfun.github.io/node-json/api/data.json')
         console.log(data);
-        let {carousel,news} = data
+        let {carousel,news,contact} = data
         commit('setCarousel', carousel)  
         commit('setNews', news)  
+        commit('setContact', contact)  
       } 
       catch (error) {
         console.log(error);
