@@ -26,9 +26,8 @@ export default createStore({
   actions: {
     async getData({commit}){
       try {
-        let fetchedInfo = await fetch('https://github.com/C0dingForFun/node-json/data/data.json')
-        let data = await fetchedInfo.json()
-        let {carousel,news} = data
+        let fetchedInfo = await axios.get('https://c0dingforfun.github.io/node-json/api/data.json')
+        let {carousel,news} = fetchedInfo
         commit('setCarousel', carousel)  
         commit('setNews', news)  
       } 

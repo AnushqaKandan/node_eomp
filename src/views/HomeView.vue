@@ -4,28 +4,7 @@
       <div id="carouselExample" class="carousel slide" v-for="slide in carousel()" :key="slide">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <!-- <img src="..." class="d-block w-100" alt="..."> -->
-             Hi
-          </div>
-          <div class="carousel-item">
-            <!-- <img src="..." class="d-block w-100" alt="..."> -->
-             Hey
-          </div>
-          <div class="carousel-item">
-            <!-- <img src="..." class="d-block w-100" alt="..."> -->
-             Hello
-          </div>
-          <div class="carousel-item">
-            <!-- <img src="..." class="d-block w-100" alt="..."> -->
-             Molo
-          </div>
-          <div class="carousel-item">
-            <!-- <img src="..." class="d-block w-100" alt="..."> -->
-             Bonjour
-          </div>
-          <div class="carousel-item">
-            <!-- <img src="..." class="d-block w-100" alt="..."> -->
-             Hola
+           <img :src="slide.brand" class="d-block w-100" >
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -46,9 +25,9 @@
       </div>
     </div>
   </section>
-  <section class="b1">
+  <!-- <section class="b1">
 
-  </section>
+  </section> -->
 </template>
 
 <script>
