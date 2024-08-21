@@ -38,14 +38,17 @@
       </div>
 
   </section>
-  <!-- <section>
-    <div>
+  <section>
       <div class="row">
-        hi
+        <div class="col-lg-3 col-md-6 col-sm-12">
+
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          
+        </div>
       </div>
-    </div>
   </section>
-  <section class="b1">
+  <!-- <section class="b1">
 
   </section> -->
 </template>
