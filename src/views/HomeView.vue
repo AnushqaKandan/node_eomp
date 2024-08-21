@@ -53,13 +53,13 @@ export default {
     position:relative;
     width: 100vw;
     height:60vh;
-    background-color:red ;
+    /* background-color:red ; */
   }
   .carousel-item img{
     object-fit:contain;
     height:300px;
-    transform: rotateY(100deg);
-    perspective: 300px;
+    /* transform: rotateY(100deg);
+    perspective: 300px; */
   }
   .b1{
     margin:auto;
