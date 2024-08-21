@@ -1,8 +1,8 @@
 <template>
   <section>
       <div id="carouselExample" class="carousel slide" >
-        <div class="carousel-inner" v-for="(slide,index) in carousel()" :key="slide" :class="{'active':index==0}">
-          <div class="carousel-item">
+        <div class="carousel-inner" v-for="(slide,index) in carousel()" :key="slide.index" :class="{'active':index==0}">
+          <div class="carousel-item active">
            <img :src="slide.image">
           </div>
         </div>
@@ -65,8 +65,8 @@ export default {
   .carousel-item img{
     object-fit:contain;
     height:300px;
-    transform: rotateX(90deg);
-    perspective: 300px;
+    /* transform: rotateX(90deg);
+    perspective: 300px; */
   }
 
 </style>
