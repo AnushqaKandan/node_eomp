@@ -17,7 +17,7 @@
                   <div>
                     <h1>{{ slide.category }}</h1>
                   </div>
-                  <div>
+                  <div class="mt-2">
                     <router-link to="/products">View More</router-link>
                   </div>
                 </div>
@@ -78,25 +78,19 @@ export default {
   }
   .carousel-item img{
     object-fit:contain;
-    height:400px;
+    height:350px;
   }
   .slider{
-    margin-top:5vh;
+    margin-top:8vh;
     width:100vw;
     display:flex;
     align-content: center;
   }
   .slider h1{
     z-index:0;
-    font-size:12vw;
+    font-size:10vw;
   }
-  .b1{
-    margin:auto;
-    background:rgb(26, 26, 26);
-    width:99vw;
-    height:300px;
-    border-radius:10%;
-  }
+  
   a{
     width:6vw;
     height:6vw;
@@ -111,5 +105,11 @@ export default {
     color:white;
     background: rgb(2, 21, 40);
   }
-
+  .b1{
+      margin:auto;
+      background:rgb(26, 26, 26);
+      width:99vw;
+      height:300px;
+      border-radius:10%;
+  }
 </style>
