@@ -24,7 +24,7 @@ import NavBarComp from './components/NavBarComp.vue';
   text-align: center;
   color: #2c3e50;
   overflow-x: hidden;
-  /* background: gray; */
+  background: gray;
   font-family: "Oxygen", sans-serif;
   
   font-style: normal;
