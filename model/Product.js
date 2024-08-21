@@ -94,7 +94,7 @@ class Products{
              if (err) throw new Error('Unable to delete a product.')
              res.json({
             status: res.statusCode,
-            msg: "A product was removed."
+            msg: "Product deleted successfully."
             })
           })
         } catch(e) {
