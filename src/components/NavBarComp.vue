@@ -41,14 +41,15 @@ export default {
     }
     nav a {
         font-weight: bold;
-        font-size:20px;
-        color:aliceblue;
+        font-size:22px;
+        color:#696969;
         text-decoration: none;
+        font-weight: 900;
         transition: 1s;
     }
     nav a:hover{
-        color:white;
-        text-shadow:4px 4px black;
+        color:rgb(5, 186, 50);
+        text-shadow:4px 4px #a8a8a8
     }
     nav img{
       width:50px;
