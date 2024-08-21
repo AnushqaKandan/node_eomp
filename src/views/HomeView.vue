@@ -33,8 +33,7 @@
 
 <script>
 export default {
-  // props:{
-  // }
+  props:['background'],
   methods:{
     getData(){
       return this.$store.dispatch('getData');
