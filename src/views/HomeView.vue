@@ -50,10 +50,8 @@ export default {
     height:auto;
   }
   #carouselExample{
-    position:relative;
     width: 100vw;
-    height:60vh;
-    /* background-color:red ; */
+    height:200px;
   }
   .carousel-item img{
     object-fit:contain;
