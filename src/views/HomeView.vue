@@ -32,11 +32,7 @@
 </template>
 
 <script>
-import NavBarComp from '../components/NavBarComp.vue';
 export default {
-  component:{
-    NavBarComp
-  },
   methods:{
     getData(){
       return this.$store.dispatch('getData');
