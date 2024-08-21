@@ -1,8 +1,8 @@
 <template>
   <section>
       <div id="carouselExample" class="carousel slide" >
-        <div class="carousel-inner" v-for="(slide,index) in carousel()" :key="slide" :class="{'active':index==0}">
-          <div class="carousel-item">
+        <div class="carousel-inner" v-for="(slide,index) in carousel()" :key="slide">
+          <div class="carousel-item" :class="{'active':index==0}">
            <img :src="slide.image">
           </div>
         </div>
@@ -55,6 +55,12 @@ export default {
     height:60vh;
     background-color:red ;
   }
+  .carousel-item img{
+    object-fit:contain;
+    height:300px;
+    transform: rotateY(100deg);
+    perspective: 300px;
+  }
   .b1{
     margin:auto;
     background:rgb(26, 26, 26);
@@ -62,11 +68,6 @@ export default {
     height:300px;
     border-radius:10%;
   }
-  .carousel-item img{
-    object-fit:contain;
-    height:300px;
-    transform: rotateX(90deg);
-    perspective: 300px;
-  }
+  
 
 </style>
