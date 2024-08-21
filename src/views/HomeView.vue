@@ -38,19 +38,53 @@
       </div>
 
   </section>
-  <section>
-      <div class="row">
-        <div class="col-lg-3 col-md-6 col-sm-12">
+  <section >
+      <div class="row categories">
+        <div class="col-lg-3 col-md-6 col-sm-12 mx-1 " id="one">
 
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-12">
-          
+        <div class="col-lg-3 col-md-6 col-sm-12 mx-1" id="two">
+
+        </div>
+        <div class="col-lg-5 col-md-12 mx-1 col-sm-12 mx-1" id="three">
+
+        </div>
+      </div>
+      <div class="row categories mt-2">
+        <div class="col-lg-5 col-md-12 col-sm-12 mx-1" id="four">
+
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 mx-1" id="five">
+
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 mx-1" id="six">
+
         </div>
       </div>
   </section>
-  <!-- <section class="b1">
+  <section>
+    <div class="row mt-5">
+      <div class="col-3">
+        <h3><b>Free shipping</b></h3>
+        <h5>Free Shipping On All Orders</h5>
+      </div>
+      <div class="col-3">
+        <h3><b>Money Guarantee</b></h3>
+        <h5>30 Day Money Back</h5>
+      </div>
+      <div class="col-3">
+        <h3><b>Online Support 24/7</b></h3>
+        <h5>Technical Support 24/7</h5>
+      </div>
+      <div class="col-3">
+        <h3><b>Secure Payment</b></h3>
+        <h5>AI Cash Accepted</h5>
+      </div>
+    </div>
+  </section>
+  <section class="b1 mt-3">
 
-  </section> -->
+  </section>
 </template>
 
 <script>
@@ -108,11 +142,46 @@ export default {
     color:white;
     background: rgb(2, 21, 40);
   }
+  .categories{
+    display:flex;
+    justify-content: center;
+  }
+  #one{
+    height:20vh;
+    background: grey;
+    border-radius:30px;
+  }
+  #two{
+    height:20vh;
+    background: grey;
+    border-radius:30px;
+  }
+  #three{
+    height:20vh;
+    background: grey;
+    border-radius:30px;
+  }
+  #four{
+    height:20vh;
+    background: grey;
+    border-radius:30px;
+  }
+  #five{
+    height:20vh;
+    background: grey;
+    border-radius:30px;
+  }
+  #six{
+    height:20vh;
+    background: grey;
+    border-radius:30px;
+  }
   .b1{
       margin:auto;
-      background:rgb(26, 26, 26);
+      /* background:rgb(26, 26, 26); */
       width:99vw;
       height:300px;
       border-radius:10%;
   }
+
 </style>
