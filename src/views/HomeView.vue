@@ -3,6 +3,7 @@
       <div id="carouselExample" class="carousel slide" >
         <div class="carousel-inner" v-for="(slide,index) in carousel()" :key="slide">
           <div class="carousel-item" :class="{'active':index==0}">
+            <!-- style="background-Image: url(`${slide.background}`)" -->
            <img :src="slide.image">
           </div>
         </div>
@@ -19,7 +20,7 @@
   <section>
     <div>
       <div class="row">
-
+        hi
       </div>
     </div>
   </section>
@@ -30,6 +31,8 @@
 
 <script>
 export default {
+  // props:{
+  // }
   methods:{
     getData(){
       return this.$store.dispatch('getData');
@@ -51,7 +54,7 @@ export default {
   }
   #carouselExample{
     width: 100vw;
-    height:200px;
+    height:400px;
   }
   .carousel-item img{
     object-fit:contain;
