@@ -1,7 +1,7 @@
 <template>
   <section>
     <div>
-      <div id="carouselExample" class="carousel slide">
+      <div id="carouselExample" class="carousel slide" v-for="slide in carousel()" :key="slide">
         <div class="carousel-inner">
           <div class="carousel-item active">
             <!-- <img src="..." class="d-block w-100" alt="..."> -->
@@ -56,7 +56,18 @@ import NavBarComp from '../components/NavBarComp.vue';
 export default {
   component:{
     NavBarComp
-  }
+  },
+  methods:{
+    getData(){
+      this.$store.dispatch('getData');
+    },
+    carousel(){
+      this.$store.state.carousel
+    }
+  },
+  mounted() {
+    this.getData();
+  },
 }
 </script>
 
