@@ -1,18 +1,27 @@
 <template>
-    <div>
-        <div class="card" style="width: 18rem;">
-            <!-- <img src="..." class="card-img-top" alt="..."> -->
-            <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-  </div>
-</div>
-    </div>
+    <slot>
+        <div class="row" v-for="product in products()" :key="product.prodID">
+            <span>{{ product.prodID }}</span> 
+            <span>{{ product.prodName }}</span>
+            <span>{{ product.quantity }}</span>
+            <span>{{ product.Category }}</span>
+            <span>{{ product.prodUrl }}</span> 
+        </div>
+    </slot>
 </template>
 <script>
 export default {
-    
+    methods: {
+        getProducts(){
+            this.$store.dispatch('getProducts');
+        },
+        products() {
+            return this.$store.state.products;
+        }
+    },
+    mounted() {
+        this.getProducts();
+    },
 }
 </script>
 <style>
