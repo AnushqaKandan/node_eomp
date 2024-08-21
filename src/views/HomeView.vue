@@ -1,10 +1,9 @@
 <template>
   <section>
-      <div id="carouselExample" class="carousel slide" v-for="(slide,index) in carousel()" :key="slide" :class="{'active':index==0}">
+      <div id="carouselExample" class="carousel slide" >
         <div class="carousel-inner">
-          <div class="carousel-item active">
-            {{ slide.brand }}
-           <img :src="slide.image" class="d-block w-100" >
+          <div class="carousel-item active" v-for="(slide,index) in carousel()" :key="slide" :class="{'active':index==0}">
+           <img :src="slide.image">
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -24,9 +23,9 @@
       </div>
     </div>
   </section>
-  <!-- <section class="b1">
+  <section class="b1">
 
-  </section> -->
+  </section>
 </template>
 
 <script>
@@ -62,6 +61,11 @@ export default {
     width:99vw;
     height:300px;
     border-radius:10%;
+  }
+  .carousel-item img{
+    object-fit:contain;
+    height:300px;
+    /* transform: rotateX(120deg); */
   }
 
 </style>
