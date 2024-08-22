@@ -62,27 +62,65 @@
         </div>
       </div>
   </section>
-  <section>
-    <div class="row mt-5">
+  <section class="service">
+    <div class="row mt-5 meh">
       <div class="col-3">
-        <h3><b>Free shipping</b></h3>
-        <h5>Free Shipping On All Orders</h5>
+        <div class="row">
+          <div class="col-1"></div>
+          <div class="col-3">
+            <i class="las la-truck"></i>
+          </div>
+          <div class="col-5">
+            <h5><b>Free shipping</b></h5>
+            <p>Free Shipping On All Orders</p>
+          </div>
+          <div class="col-1"></div>
+        </div>
       </div>
       <div class="col-3">
-        <h3><b>Money Guarantee</b></h3>
-        <h5>30 Day Money Back</h5>
+        <div class="row">
+          <div class="col-1"></div>
+          <div class="col-3">
+            <i class="las la-check-circle"></i>
+          </div>
+          <div class="col-5">
+            <h5><b>Money Guarantee</b></h5>
+            <p>30 Day Money Back</p>
+          </div>
+          <div class="col-1"></div>
+        </div>
+        
       </div>
       <div class="col-3">
-        <h3><b>Online Support 24/7</b></h3>
-        <h5>Technical Support 24/7</h5>
+        <div class="row">
+          <div class="col-1"></div>
+          <div class="col-3">
+            <i class="las la-headphones"></i>
+          </div>
+          <div class="col-5">
+            <h5><b>Online Support 24/7</b></h5>
+            <p>Technical Support 24/7</p>
+          </div>
+          <div class="col-1"></div>
+        </div>
       </div>
       <div class="col-3">
-        <h3><b>Secure Payment</b></h3>
-        <h5>AI Cash Accepted</h5>
+        <div class="row">
+          <div class="col-1"></div>
+          <div class="col-3">
+            <i class="las la-wallet"></i>
+          </div>
+          <div class="col-5">
+            <h5><b>Secure Payment</b></h5>
+            <p>AI Cash Accepted</p>
+          </div>
+          <div class="col-1"></div>
+        </div>
+       
       </div>
     </div>
   </section>
-  <section class="b1 mt-3">
+  <section class="banner mt-3">
 
   </section>
 </template>
@@ -182,6 +220,24 @@ export default {
       width:99vw;
       height:300px;
       border-radius:10%;
+  }
+  .service{
+    width:95vw;
+    height:100px;
+    display:flex;
+    justify-content: center;
+  }
+  .service h5{
+    font-size:0.8vw;
+  }
+  .service p{
+    font-size:0.8vw;
+  }
+  .service i{
+    font-size:3vw;
+  }
+  .service .meh{
+    width:90vw;
   }
 
 </style>
