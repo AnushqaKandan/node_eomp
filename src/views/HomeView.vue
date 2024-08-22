@@ -188,18 +188,18 @@ export default {
     background: rgb(2, 21, 40);
   } */
   a {
-  /* width: 10em; */
   position: relative;
   height: 3.5em;
   border: 3px ridge #149CEA;
   outline: none;
   background-color: transparent;
-  color: white;
+  color: black;
   transition: 1s;
   border-radius: 0.3em;
   font-size: 16px;
   font-weight: bold;
   cursor: pointer;
+  text-decoration: none;
 }
 
 a::after {
@@ -209,7 +209,7 @@ a::after {
   left: 3%;
   width: 95%;
   height: 40%;
-  background-color: #212121;
+  /* background-color: #212121; */
   transition: 0.5s;
   transform-origin: center;
 }
@@ -222,7 +222,7 @@ a::before {
   left: 3%;
   width: 95%;
   height: 40%;
-  background-color: #212121;
+  /* background-color: #212121; */
   transition: 0.5s;
 }
 
@@ -232,6 +232,7 @@ a:hover::before, button:hover::after {
 
 a:hover {
   box-shadow: inset 0px 0px 25px #1479EA;
+  color:white;
 }
   .categories{
     display:flex;

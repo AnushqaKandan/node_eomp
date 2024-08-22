@@ -1,9 +1,15 @@
 <template>
     <div>
+        <div class="d-flex justify-content-center mt-5">
+            <div class="d-flex justify-content-between">
+                <input type="text" size="40">
+                <a></a>
+            </div>
+        </div>
         <slot name="products">
             <section>
                     <div class="row" v-for="product in products()" :key="product.prodID">
-                        <div class="card mt-2" style="width: 18rem;">
+                        <div class="card mt-5" style="width: 18rem;">
                             <img :src="product.prodURL" class="card-img-top">
                             <div class="card-body">
                                 <div class="prodName">
@@ -52,14 +58,17 @@ export default {
     .prodName{
         height: 8vh;
     }
-    a{
+    .card a{
         width: 20vw;
         background:black;
         color:white;
         transition:1s;
     }
-    a:hover{
+    .card a:hover{
         color:white;
         background: rgb(2, 21, 40);
+    }
+    a{
+
     }
 </style>
