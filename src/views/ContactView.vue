@@ -1,8 +1,8 @@
 <template>
     <div id="contact">
         <div class="mx-auto" id="form">
-            <form action="https://formspree.io/f/mwperylp" method="POST" role="form" class="mx-auto">
-                      <div class="row">
+            <form action="https://formspree.io/f/mwperylp" method="POST" role="form" class="mx-auto my-auto">
+                      <div class="row text">
                         <div class="col-md-6 form-group">
                           <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" v-model="name">
                         </div>
@@ -61,12 +61,8 @@ export default {
 <style scoped>
     #contact{
         background-image: url('https://c0dingforfun.github.io/node-images/Images/Contact/laptop.jpg');
-        /* filter: blur(3px); */
-        /* position:absolute; */
-        /* background-attachment: fixed; */
         background-position: center;
         background-size: cover;
-        /* object-fit: contain; */
         height:90vh;
     }
     #form{
@@ -75,6 +71,8 @@ export default {
         width:50vw;
         height:50vh;
         border: double 2px black;
-        /* filter: blur(2px); */
+        backdrop-filter: blur(2px);
+        background: transparent;
     }
+
 </style>
