@@ -66,9 +66,11 @@ export default {
     }
     .card a:hover{
         color:white;
-        background: rgb(2, 21, 40);
+        background: #1479EA;
     }
     a{
-
+        width:10vw;
+        height:5vh;
+        background: #1479EA;
     }
 </style>

@@ -49,8 +49,8 @@ export default {
         transition: 1s;
     }
     nav a:hover{
-        color:rgb(5, 186, 50);
-        text-shadow:4px 4px #a8a8a8
+        color:#1479EA;
+        text-shadow:4px 4px #67acd1
     }
     nav img{
       width:50px;
