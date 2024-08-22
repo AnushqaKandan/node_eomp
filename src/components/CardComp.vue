@@ -1,14 +1,9 @@
 <template>
-    <slot>
-        <div class="row" v-for="product in products()" :key="product.prodID">
-            
-            <span>{{ product.prodID }}</span> 
-            <span>{{ product.prodName }}</span>
-            <span>{{ product.quantity }}</span>
-            <span>{{ product.Category }}</span>
-            <span>{{ product.prodUrl }}</span> 
-        </div>
-    </slot>
+    <div>
+        <slot name="products">
+            404 ERROR
+        </slot>
+    </div>
 </template>
 <script>
 export default {
