@@ -76,7 +76,7 @@ export default {
         height:70vh;
         border: double 2px black;
         backdrop-filter: blur(2px);
-        border-radius:10%;
+        border-radius:20px;
     }
     button {
   width: 10em;

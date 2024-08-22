@@ -1,11 +1,18 @@
 <template>
     <div>
-        <div class="d-flex justify-content-center mt-5">
-            <div class="d-flex justify-content-between">
-                <input type="text" size="40">
-                <a></a>
-            </div>
-        </div>
+        <div class="d-flex justify-content-center mt-4 gap-3" id="filter">
+          <input type="text" size="50" placeholder="Search..." id="mySearch">
+          <div class="dropdown-center">
+            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Filter:
+            </button>
+            <ul class="dropdown-menu" >
+              <li><a class="dropdown-item" href="#">Category</a></li>
+              <li><a class="dropdown-item" href="#">Price:Low-High</a></li>
+              <li><a class="dropdown-item" href="#">Price:High-Low</a></li>
+            </ul>
+          </div>
+      </div>
         <slot name="products">
             <section>
                     <div class="row" v-for="product in products()" :key="product.prodID">
@@ -68,7 +75,7 @@ export default {
         color:white;
         background: #1479EA;
     }
-    a{
+    #filter button{
         width:10vw;
         height:5vh;
         background: #1479EA;
