@@ -45,12 +45,12 @@ export default {
         font-size:22px;
         color:#696969;
         text-decoration: none;
-        font-weight: 900;
+        font-weight: 600;
         transition: 1s;
     }
     nav a:hover{
         color:#1479EA;
-        text-shadow:4px 4px #67acd1
+        text-shadow:4px 4px #67acd1;
     }
     nav img{
       width:50px;
@@ -60,7 +60,7 @@ export default {
       font-size: 25px;
     }
     h1{
-      color:rgba(240, 236, 236, 0.6)
+      color:#1479EA;
     }
 
 </style>
