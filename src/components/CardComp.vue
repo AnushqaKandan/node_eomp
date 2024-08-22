@@ -1,7 +1,10 @@
 <template>
     <div>
         <div class="d-flex justify-content-center mt-4 gap-3" id="filter">
-          <input type="text" size="50" placeholder="Search..." id="mySearch">
+            <input type="text" placeholder="Search..." id="mySearch">
+            <button class="btn" type="button">
+              <p>Search</p>
+            </button>
           <div class="dropdown-center">
             <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               Filter:
@@ -78,6 +81,19 @@ export default {
     #filter button{
         width:10vw;
         height:5vh;
+        font-size:2vh;
         background: #1479EA;
+    }
+    #filter a{
+        font-size:2vh;
+        transition: 1s;
+    }
+    #filter a:hover{
+        background: #1479EA;
+        color:white;
+    }
+    #filter input{
+        width:15vw;
+        border-radius:15px;
     }
 </style>
