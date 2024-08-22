@@ -14,16 +14,16 @@
                       <div class="offcanvas-body text-center">                   
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 p-3 f-3">                     
                           <li class="nav-item">
-                            <router-link class="nav-link" aria-current="page" to="/">Home</router-link>
+                            <router-link class="nav-link" aria-current="page" to="/"><i class="las la-home"></i>Home</router-link>
                           </li>
                           <li class="nav-item">
-                            <router-link class="nav-link" to="/about">About</router-link>
+                            <router-link class="nav-link" to="/about"><i class="las la-users"></i>About</router-link>
                           </li>
                           <li class="nav-item">
-                            <router-link class="nav-link" to="/products">Products</router-link>
+                            <router-link class="nav-link" to="/products"><i class="las la-store-alt"></i>Products</router-link>
                           </li>
                           <li class="nav-item">
-                            <router-link class="nav-link" to="/contact">Contact</router-link>
+                            <router-link class="nav-link" to="/contact"><i class="las la-phone-square"></i>Contact</router-link>
                           </li>                     
                         </ul>                    
                       </div>
@@ -55,6 +55,9 @@ export default {
     nav img{
       width:50px;
       height:50px;
+    }
+    nav i{
+      font-size: 25px;
     }
     h1{
       color:rgba(240, 236, 236, 0.6)
