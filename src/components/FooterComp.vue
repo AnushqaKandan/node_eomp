@@ -1,17 +1,17 @@
 <template>
-    <div id="footer">
-        <div class="row">
+    <div class="footer">
+        <div class="row" >
             <div class="col-lg-2 col-md-2 col-sm-12">
-                <h5>Hello World </h5>
+                <h5>Hello World</h5>
             </div>
             <div class="col-lg-2 col-md-2 col-sm-12">
-                <h5>Hello World </h5>
+                <h5>Hello World</h5>
             </div>
             <div class="col-lg-2 col-md-2 col-sm-12">
-                <h5>Hello World </h5>
+                <h5>Hello World</h5>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-12">
-                <h5>Hello World </h5>
+                <h5>Hello World</h5>
             </div>
         </div>
     </div>
@@ -22,11 +22,14 @@ export default {
 }
 </script>
 <style scoped>
-    #footer{
+    .footer{
         background-image: url('https://c0dingforfun.github.io/node-images/Images/Footer/background.jpg');
         background-size: cover;
         width:100vw;
         height:20vh;
+        
+    }
+    #footer{
         display:flex;
         justify-content:center;
         align-content:center;
