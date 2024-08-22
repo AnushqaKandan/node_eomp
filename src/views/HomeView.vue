@@ -120,8 +120,15 @@
       </div>
     </div>
   </section>
-  <section class="banner mt-3">
+  <section class="banner mt-5">
+    <div class="row">
+      <div>
+        
+      </div>
+      <div>
 
+      </div>
+    </div>
   </section>
 </template>
 
