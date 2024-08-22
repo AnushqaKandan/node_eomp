@@ -2,7 +2,9 @@
     <div class="footer">
         <div class="row" >
             <div class="col-lg-6 col-md-6 col-sm-12">
-                <h5>Hello World</h5>
+                <div>
+                    <img src="https://c0dingforfun.github.io/node-images/Images/Home/Carousel/Watch.png" alt="">
+                </div>
             </div>
             <div class="col-lg-2 col-md-2 col-sm-12">
                 <h5>Hello World</h5>
@@ -30,5 +32,9 @@ export default {
         display:flex;
         justify-content:center;
         align-content:center;
+    }
+    .footer img{
+        width:100%;
+        height:10vh;
     }
 </style>
