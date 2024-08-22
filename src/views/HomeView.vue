@@ -214,12 +214,12 @@ export default {
     background: grey;
     border-radius:30px;
   }
-  .b1{
+  .banner{
       margin:auto;
-      /* background:rgb(26, 26, 26); */
-      width:99vw;
+      background:rgb(26, 26, 26);
+      width:98vw;
       height:300px;
-      border-radius:10%;
+      border-radius:20px
   }
   .service{
     width:95vw;
