@@ -123,7 +123,7 @@
   <section class="banner mt-5">
     <div class="row">
       <div>
-        
+
       </div>
       <div>
 
@@ -235,13 +235,13 @@ export default {
     justify-content: center;
   }
   .service h5{
-    font-size:0.8vw;
+    font-size:15px;
   }
   .service p{
-    font-size:0.8vw;
+    font-size:14px;
   }
   .service i{
-    font-size:3vw;
+    font-size:30px;
   }
   .service .meh{
     width:90vw;

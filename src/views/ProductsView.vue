@@ -47,6 +47,7 @@ export default {
         display:grid;
         grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         place-items: center;
+        margin:auto;
     }
     .card{
         height:360px;
