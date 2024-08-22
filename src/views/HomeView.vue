@@ -38,7 +38,7 @@
       </div>
 
   </section>
-  <section >
+  <section class="mt-5">
       <div class="row categories">
         <div class="col-lg-3 col-md-6 col-sm-12 mx-1 " id="one">
 
