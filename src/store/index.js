@@ -1,5 +1,6 @@
 import { createStore } from 'vuex';
 import axios from 'axios';
+import { toast } from 'vue-toastify';
 
 const apiURL = 'https://node-eomp-u5mv.onrender.com/'
 
