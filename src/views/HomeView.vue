@@ -128,6 +128,11 @@
       </div>
     </div>
   </section>
+  <section class="mt-5">
+    <div v-for="news in getData()" :key="news">
+      {{ news.description }}
+    </div>
+  </section>
 </template>
 
 <script>
