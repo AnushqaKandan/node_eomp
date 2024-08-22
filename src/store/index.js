@@ -5,16 +5,41 @@ const apiURL = 'https://node-eomp-u5mv.onrender.com/'
 
 export default createStore({
   state: {
-    products:null
+    products:null,
+    carousel:null,
+    news:null,
+    contact:null
   },
   getters: {
   },
   mutations: {
     setProducts(state,payload){
       state.products = payload;
+    },
+    setCarousel(state,payload){
+      state.carousel = payload;
+    },
+    setNews(state,payload){
+      state.news = payload;
+    },
+    setContact(state,payload){
+      state.contact = payload;
     }
   },
   actions: {
+    async getData({commit}){
+      try {
+        let {data} = await axios.get('https://c0dingforfun.github.io/node-json/api/data.json')
+        console.log(data);
+        let {carousel,news,contact} = data
+        commit('setCarousel', carousel)  
+        commit('setNews', news)  
+        commit('setContact', contact)  
+      } 
+      catch (error) {
+        console.log(error);
+      }
+    },
     async getProducts ({commit}) {
       try {
         let {data} = await axios.get(`${apiURL}products`);

@@ -1,31 +1,30 @@
 <template>
   <section>
-    <div>
-      <div id="carouselExample" class="carousel slide">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <!-- <img src="..." class="d-block w-100" alt="..."> -->
-             Hi
-          </div>
-          <div class="carousel-item">
-            <!-- <img src="..." class="d-block w-100" alt="..."> -->
-             Hey
-          </div>
-          <div class="carousel-item">
-            <!-- <img src="..." class="d-block w-100" alt="..."> -->
-             Hello
-          </div>
-          <div class="carousel-item">
-            <!-- <img src="..." class="d-block w-100" alt="..."> -->
-             Molo
-          </div>
-          <div class="carousel-item">
-            <!-- <img src="..." class="d-block w-100" alt="..."> -->
-             Bonjour
-          </div>
-          <div class="carousel-item">
-            <!-- <img src="..." class="d-block w-100" alt="..."> -->
-             Hola
+      <div id="carouselExample" class="carousel slide" >
+        
+        <div class="carousel-inner" >
+          <div class="carousel-item" v-for="(slide,index) in carousel()" :key="index" :class="{'active':index==0}">
+            <!-- style="{background-Image: url(`${slide.background}`)}" -->
+             <div class="slider row">
+              <div class="col-lg-1 col-md-1 col-sm-12"></div>
+                <div class="col-lg-5 col-md-5 col-sm-12">
+                  <div>
+                    <h5>{{ slide.brand }}</h5>
+                  </div>
+                  <div>
+                    <h2><b>{{ slide.type }}</b></h2>
+                  </div>
+                  <div>
+                    <h1>{{ slide.category }}</h1>
+                  </div>
+                  <div class="mt-2">
+                    <router-link to="/products">View More</router-link>
+                  </div>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                  <img :src="slide.image">
+                </div>
+             </div>
           </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -37,23 +36,71 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-    </div>
+
+  </section>
+  <section class="mt-5">
+      <div class="row categories">
+        <div class="col-lg-3 col-md-6 col-sm-12 mx-1 " id="one">
+
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 mx-1" id="two">
+
+        </div>
+        <div class="col-lg-5 col-md-12 mx-1 col-sm-12 mx-1" id="three">
+
+        </div>
+      </div>
+      <div class="row categories mt-2">
+        <div class="col-lg-5 col-md-12 col-sm-12 mx-1" id="four">
+
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 mx-1" id="five">
+
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12 mx-1" id="six">
+
+        </div>
+      </div>
   </section>
   <section>
-    <div>
-      <div class="row">
-
+    <div class="row mt-5">
+      <div class="col-3">
+        <h3><b>Free shipping</b></h3>
+        <h5>Free Shipping On All Orders</h5>
+      </div>
+      <div class="col-3">
+        <h3><b>Money Guarantee</b></h3>
+        <h5>30 Day Money Back</h5>
+      </div>
+      <div class="col-3">
+        <h3><b>Online Support 24/7</b></h3>
+        <h5>Technical Support 24/7</h5>
+      </div>
+      <div class="col-3">
+        <h3><b>Secure Payment</b></h3>
+        <h5>AI Cash Accepted</h5>
       </div>
     </div>
+  </section>
+  <section class="b1 mt-3">
+
   </section>
 </template>
 
 <script>
-import NavBarComp from '../components/NavBarComp.vue';
 export default {
-  component:{
-    NavBarComp
-  }
+  // props:[background=string],
+  methods:{
+    getData(){
+      return this.$store.dispatch('getData');
+    },
+    carousel(){
+      return this.$store.state.carousel
+    }
+  },
+  mounted() {
+    this.getData();
+  },
 }
 </script>
 
@@ -63,9 +110,78 @@ export default {
     height:auto;
   }
   #carouselExample{
-    position:relative;
     width: 100vw;
-    height:60vh;
+    height:500px;
+  }
+  .carousel-item img{
+    object-fit:contain;
+    height:350px;
+  }
+  .slider{
+    margin-top:8vh;
+    width:100vw;
+    display:flex;
+    align-content: center;
+  }
+  .slider h1{
+    z-index:0;
+    font-size:10vw;
+  }
+  
+  a{
+    width:6vw;
+    height:6vw;
+    border-radius:10%;
+    padding:1vw;
+    color:whitesmoke;
+    background: rgb(3, 108, 213);
+    transition:0.5s;
+    text-decoration: none;
+  }
+  a:hover{
+    color:white;
+    background: rgb(2, 21, 40);
+  }
+  .categories{
+    display:flex;
+    justify-content: center;
+  }
+  #one{
+    height:20vh;
+    background: grey;
+    border-radius:30px;
+  }
+  #two{
+    height:20vh;
+    background: grey;
+    border-radius:30px;
+  }
+  #three{
+    height:20vh;
+    background: grey;
+    border-radius:30px;
+  }
+  #four{
+    height:20vh;
+    background: grey;
+    border-radius:30px;
+  }
+  #five{
+    height:20vh;
+    background: grey;
+    border-radius:30px;
+  }
+  #six{
+    height:20vh;
+    background: grey;
+    border-radius:30px;
+  }
+  .b1{
+      margin:auto;
+      /* background:rgb(26, 26, 26); */
+      width:99vw;
+      height:300px;
+      border-radius:10%;
   }
 
 </style>

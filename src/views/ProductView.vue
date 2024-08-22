@@ -1,8 +1,6 @@
 <template>
     <div>
-        <slot name="products">
-            404 ERROR
-        </slot>
+        this is the product page.
     </div>
 </template>
 <script>

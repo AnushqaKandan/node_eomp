@@ -1,16 +1,34 @@
-<template >
+<template>
     <div class="container mt-5">
-        <div class="row" v-for="product in products()" :key="product.prodID">
-            <span>{{ product.prodID }}</span> 
-            <span>{{ product.prodName }}</span>
-            <span>{{ product.quantity }}</span>
-            <span>{{ product.Category }}</span>
-            <span>{{ product.prodUrl }}</span> 
-        </div>
+        <CardComp>
+            <template #products>
+                <section>
+                    <div class="row" v-for="product in products()" :key="product.prodID">
+                        <div class="card mt-2" style="width: 18rem;">
+                            <img :src="product.prodURL" class="card-img-top">
+                            <div class="card-body">
+                                <div class="prodName">
+                                    <h5 class="card-title">{{product.prodName}}</h5>
+
+                                </div>
+                                <div class="d-flex justify-content-between align-content-end">
+                                    <router-link to="/product" class="btn mx-2">View More</router-link>   
+                                    <a href="#" class="btn">Cart</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </template>
+        </CardComp>
     </div>
 </template>
 <script>
+import CardComp from '@/components/CardComp.vue';
 export default {
+    components:{
+        CardComp
+    },
     methods: {
         getProducts(){
             this.$store.dispatch('getProducts');
@@ -25,5 +43,29 @@ export default {
 }
 </script>
 <style scoped>
-    
+    section{
+        display:grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        place-items: center;
+    }
+    .card{
+        height:360px;
+        margin-right:50px;
+    }
+    .card img{
+        height:200px;
+    }
+    .prodName{
+        height: 8vh;
+    }
+    a{
+        width: 20vw;
+        background:black;
+        color:white;
+        transition:1s;
+    }
+    a:hover{
+        color:white;
+        background: rgb(2, 21, 40);
+    }
 </style>
