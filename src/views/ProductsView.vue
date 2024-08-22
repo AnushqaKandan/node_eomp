@@ -2,15 +2,18 @@
     <div class="container mt-5">
         <CardComp>
             <template #products>
-                <div class="row" v-for="product in products()" :key="product.prodID">
-                    <div class="card" style="width: 18rem;">
-                        <img :src="product.prodUrl" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">{{product.prodName}}</h5>
-                            <a href="#" class="btn btn-primary">View More</a>
+                <section>
+                    <div class="row" v-for="product in products()" :key="product.prodID">
+                        <div class="card mt-2" style="width: 18rem;">
+                            <img :src="product.prodURL" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">{{product.prodName}}</h5>
+                                <a href="#" class="btn btn-primary">View More</a>
+                                <a href="#" class="btn btn-primary">Cart</a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </section>
             </template>
         </CardComp>
     </div>
@@ -35,5 +38,16 @@ export default {
 }
 </script>
 <style scoped>
-    
+    section{
+        display:grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        place-items: center;
+    }
+    .card{
+        height:30vh;
+    }
+    .card img{
+        object-fit: contain;
+        height:10vh;
+    }
 </style>
