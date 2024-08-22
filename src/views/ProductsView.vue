@@ -9,7 +9,6 @@
                             <div class="card-body">
                                 <div class="prodName">
                                     <h5 class="card-title">{{product.prodName}}</h5>
-
                                 </div>
                                 <div class="d-flex justify-content-between align-content-end">
                                     <router-link to="/product" class="btn mx-2">View More</router-link>   
