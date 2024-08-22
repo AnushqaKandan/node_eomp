@@ -1,10 +1,8 @@
 <template>
   <section>
-      <div id="carouselExample" class="carousel slide" >
-        
+      <div id="carouselExample" class="carousel slide">
         <div class="carousel-inner" >
           <div class="carousel-item" v-for="(slide,index) in carousel()" :key="index" :class="{'active':index==0}">
-            <!-- style="{background-Image: url(`${slide.background}`)}" -->
              <div class="slider row">
               <div class="col-lg-1 col-md-1 col-sm-12"></div>
                 <div class="col-lg-5 col-md-5 col-sm-12">
@@ -134,7 +132,6 @@
 
 <script>
 export default {
-  // props:[background=string],
   methods:{
     getData(){
       return this.$store.dispatch('getData');
@@ -172,21 +169,6 @@ export default {
     z-index:0;
     font-size:10vw;
   }
-  
-  /* a{
-    width:6vw;
-    height:6vw;
-    border-radius:10%;
-    padding:1vw;
-    color:whitesmoke;
-    background: rgb(3, 108, 213);
-    transition:0.5s;
-    text-decoration: none;
-  }
-  a:hover{
-    color:white;
-    background: rgb(2, 21, 40);
-  } */
   a {
   position: relative;
   height: 3.5em;
@@ -209,7 +191,6 @@ a::after {
   left: 3%;
   width: 95%;
   height: 40%;
-  /* background-color: #212121; */
   transition: 0.5s;
   transform-origin: center;
 }
@@ -222,7 +203,6 @@ a::before {
   left: 3%;
   width: 95%;
   height: 40%;
-  /* background-color: #212121; */
   transition: 0.5s;
 }
 
