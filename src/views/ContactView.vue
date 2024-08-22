@@ -1,20 +1,20 @@
 <template>
     <div id="contact">
-        <div class="d-flex justify-content-center" id="form">
-            <form action="https://formspree.io/f/xjvnzvav" method="POST" role="form">
+        <div class="mx-auto" id="form">
+            <form action="https://formspree.io/f/mwperylp" method="POST" role="form" class="mx-auto">
                       <div class="row">
                         <div class="col-md-6 form-group">
                           <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" v-model="name">
                         </div>
                         <div class="col-md-6 form-group mt-3 mt-md-0">
-                          <input type="text" name="surname" class="form-control" id="surname" placeholder="Your Surname" >
+                          <input type="text" name="surname" class="form-control" id="surname" placeholder="Your Surname" v-model="surname">
                         </div>
                       </div>
                       <div class="form-group mt-3">
-                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" >
+                        <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" v-model="email">
                       </div>
                       <div class="form-group mt-3">
-                        <textarea class="form-control" name="message" rows="5" placeholder="Message" ></textarea>
+                        <textarea class="form-control" name="message" rows="5" placeholder="Message" v-model="message"></textarea>
                       </div>
                       <div class="text-center mt-4 send">
                         <button type="submit" @click="check()">Send Message</button> <br>
@@ -23,16 +23,10 @@
         </div>
         
     </div>
-    <!-- <div class="row"> -->
-        <!-- <div class="col-lg-6 col-md-6 col-sm-12" id="contact">
-            <img src="https://c0dingforfun.github.io/node-images/Images/Contact/laptop.jpg" alt="">
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-12">
-
-        </div> -->
-    <!-- </div> -->
 </template>
 <script>
+import {toast} from 'vue3-toastify';
+import "vue3-toastify/dist/index.css";
 export default {
     data() {
         return {
@@ -42,7 +36,26 @@ export default {
             message: '',
         }
     },
-    
+    methods:{
+        check(){
+            if((this.name == '') && (this.surname == '') && (this.email == '') && (this.message == '')){
+                toast("Please fill in all the fields", {
+                    "theme": "dark",
+                    "type": "error",
+                    "position": "top-center",
+                    "dangerouslyHTMLString": true
+                })
+            }
+            else{
+                toast("Message sent successfully!", {
+                    "theme": "dark",
+                    "type": "success",
+                    "position": "top-center",
+                    "dangerouslyHTMLString": true
+                })
+            }
+        }
+    }
 }
 </script>
 <style scoped>
@@ -57,8 +70,11 @@ export default {
         height:90vh;
     }
     #form{
+        display:flex;
+        align-items:center ;
         width:50vw;
         height:50vh;
-        filter: blur(2px);
+        border: double 2px black;
+        /* filter: blur(2px); */
     }
 </style>
