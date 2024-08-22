@@ -1,6 +1,7 @@
 import { createStore } from 'vuex';
 import axios from 'axios';
-import { toast } from 'vue-toastify';
+import { toast } from 'vue3-toastify';
+import "vue3-toastify/dist/index.css";
 
 const apiURL = 'https://node-eomp-u5mv.onrender.com/'
 
@@ -37,7 +38,11 @@ export default createStore({
         commit('setNews', news)   
       } 
       catch (error) {
-        console.log(error);
+        toast("There has been an error", {
+          "theme": "dark",
+          "type": "error",
+          "dangerouslyHTMLString": true
+        })
       }
     },
     async getProducts ({commit}) {
@@ -46,7 +51,11 @@ export default createStore({
           commit('setProducts',data.results)
       }
       catch (error) {
-        console.log(error);      
+        toast("There has been an error", {
+          "theme": "dark",
+          "type": "error",
+          "dangerouslyHTMLString": true
+        })      
       }
     },
     async getProducts ({commit}) {
@@ -55,7 +64,11 @@ export default createStore({
           commit('setProducts',data.results)
       }
       catch (error) {
-        console.log(error);      
+        toast("There has been an error", {
+          "theme": "dark",
+          "type": "error",
+          "dangerouslyHTMLString": true
+        })      
       }
     }
     
