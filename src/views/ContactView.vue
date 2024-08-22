@@ -1,8 +1,8 @@
 <template>
     <div id="contact">
         <div class="mx-auto" id="form">
-            
             <form action="https://formspree.io/f/mwperylp" method="POST" role="form" class="mx-auto my-auto">
+                <h2 class="text-center text-white"><b>Reach Us Here:</b></h2>
                       <div class="row text">
                         <div class="col-md-6 form-group">
                           <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" v-model="name">
@@ -69,10 +69,11 @@ export default {
         align-items: center;
     }
     #form{
+        padding:0.8em;
         display:flex;
         align-items:center ;
         width:50vw;
-        height:50vh;
+        height:70vh;
         border: double 2px black;
         backdrop-filter: blur(2px);
         border-radius:10%;
