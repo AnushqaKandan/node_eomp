@@ -2,7 +2,7 @@
     <div id="contact">
         <div class="mx-auto" id="form">
             <form action="https://formspree.io/f/mwperylp" method="POST" role="form" class="mx-auto my-auto">
-                <h2 class="text-center text-white"><b>Reach Us Here:</b></h2>
+                <h1 class="text-center text-white"><b>Reach Us Here:</b></h1>
                       <div class="row text">
                         <div class="col-md-6 form-group">
                           <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" v-model="name">
