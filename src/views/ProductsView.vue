@@ -7,9 +7,14 @@
                         <div class="card mt-2" style="width: 18rem;">
                             <img :src="product.prodURL" class="card-img-top">
                             <div class="card-body">
-                                <h5 class="card-title">{{product.prodName}}</h5>
-                                <a href="#" class="btn btn-primary">View More</a>
-                                <a href="#" class="btn btn-primary">Cart</a>
+                                <div class="prodName">
+                                    <h5 class="card-title">{{product.prodName}}</h5>
+
+                                </div>
+                                <div class="d-flex justify-content-between align-content-end">
+                                    <router-link to="/product" class="btn mx-2">View More</router-link>   
+                                    <a href="#" class="btn">Cart</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -40,14 +45,27 @@ export default {
 <style scoped>
     section{
         display:grid;
-        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
         place-items: center;
     }
     .card{
-        height:30vh;
+        height:360px;
+        margin-right:50px;
     }
     .card img{
-        object-fit: contain;
-        height:10vh;
+        height:200px;
+    }
+    .prodName{
+        height: 8vh;
+    }
+    a{
+        width: 20vw;
+        background:black;
+        color:white;
+        transition:1s;
+    }
+    a:hover{
+        color:white;
+        background: rgb(2, 21, 40);
     }
 </style>
