@@ -1,6 +1,7 @@
 <template>
     <div id="contact">
         <div class="mx-auto" id="form">
+            
             <form action="https://formspree.io/f/mwperylp" method="POST" role="form" class="mx-auto my-auto">
                       <div class="row text">
                         <div class="col-md-6 form-group">
@@ -64,6 +65,8 @@ export default {
         background-position: center;
         background-size: cover;
         height:90vh;
+        display:flex;
+        align-items: center;
     }
     #form{
         display:flex;
@@ -72,7 +75,7 @@ export default {
         height:50vh;
         border: double 2px black;
         backdrop-filter: blur(2px);
-        background: transparent;
+        border-radius:10%;
     }
 
 </style>

@@ -173,7 +173,7 @@ export default {
     font-size:10vw;
   }
   
-  a{
+  /* a{
     width:6vw;
     height:6vw;
     border-radius:10%;
@@ -186,7 +186,53 @@ export default {
   a:hover{
     color:white;
     background: rgb(2, 21, 40);
-  }
+  } */
+  a {
+  /* width: 10em; */
+  position: relative;
+  height: 3.5em;
+  border: 3px ridge #149CEA;
+  outline: none;
+  background-color: transparent;
+  color: white;
+  transition: 1s;
+  border-radius: 0.3em;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #212121;
+  transition: 0.5s;
+  transform-origin: center;
+}
+
+a::before {
+  content: "";
+  transform-origin: center;
+  position: absolute;
+  top: 80%;
+  left: 3%;
+  width: 95%;
+  height: 40%;
+  background-color: #212121;
+  transition: 0.5s;
+}
+
+a:hover::before, button:hover::after {
+  transform: scale(0)
+}
+
+a:hover {
+  box-shadow: inset 0px 0px 25px #1479EA;
+}
   .categories{
     display:flex;
     justify-content: center;
