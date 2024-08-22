@@ -8,7 +8,8 @@ export default createStore({
     products:null,
     carousel:null,
     news:null,
-    contact:null
+    contact:null,
+    users:null
   },
   getters: {
   },
@@ -24,6 +25,9 @@ export default createStore({
     },
     setContact(state,payload){
       state.contact = payload;
+    },
+    setUsers(state, payload){
+      state.users = payload;
     }
   },
   actions: {
@@ -38,6 +42,15 @@ export default createStore({
       } 
       catch (error) {
         console.log(error);
+      }
+    },
+    async getProducts ({commit}) {
+      try {
+        let {data} = await axios.get(`${apiURL}products`);
+          commit('setProducts',data.results)
+      }
+      catch (error) {
+        console.log(error);      
       }
     },
     async getProducts ({commit}) {
