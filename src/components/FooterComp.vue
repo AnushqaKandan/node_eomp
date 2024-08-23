@@ -8,12 +8,14 @@
             </div>
             <div class="col-lg-2 col-md-2 col-sm-12">
                 <h3>Contact</h3>
-                <div>hi</div>
-                <div>hi</div>
-                <div>hi</div>
+                <div><router-link to="/contact"><i class="las la-phone-square"></i>Call Us: 021 907 2378</router-link></div>
+                <div><router-link to="/contact"><i class="las la-map-marker-alt"></i>Location:Industrial Area - Athlone Industrial</router-link></div>
             </div>
-            <div class="col-lg-3 col-md-2 col-sm-12">
-                <h5>Hello World</h5>
+            <div class="col-lg-3 col-md-2 col-sm-12 social">
+                <h3>Follow Us On:</h3>
+                    <a href=""><i class="lab la-facebook"></i></a>
+                    <a href=""><i class="lab la-instagram"></i></a>
+                    <a href="node-eomp-4d23a.firebaseapp.com"><i class="las la-globe"></i></a>
             </div>
         </div>
     </div>
@@ -28,21 +30,27 @@ export default {
         background-image: url('https://c0dingforfun.github.io/node-images/Images/Footer/background.jpg');
         background-size: cover;
         width:100vw;
-        height:25vh;
+
+        height:400px;
         
     }
-    #footer{
-        display:flex;
-        justify-content:center;
-        align-content:center;
-    }
     .row{
-        padding-top:3vh;
+        padding-top:10px;
     }
     .footer img{
         width:170px;
-        height:10vh;
+        height:150px;
         background:white;
         border-radius:50%;
+    }
+    a{
+        color:white;
+    }
+    .footer i{
+        font-size:20px;
+    }
+    .social i{
+        font-size:30px;
+        padding:0.3em;
     }
 </style>
