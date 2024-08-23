@@ -12,6 +12,7 @@
 import CardComp from '@/components/CardComp.vue';
 import SpinnerComp from '@/components/SpinnerComp.vue';
 export default {
+  
     components:{
         CardComp,
         SpinnerComp
@@ -22,7 +23,8 @@ export default {
         },
         products() {
             return this.$store.state.products;
-        }
+        },
+        
     },
     mounted() {
         this.getProducts();

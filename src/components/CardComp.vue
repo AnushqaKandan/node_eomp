@@ -1,10 +1,7 @@
 <template>
     <div>
         <div class="d-flex justify-content-center mt-4 gap-3" id="filter">
-            <input type="text" placeholder="Search..." id="mySearch">
-            <button class="btn" type="button">
-              <p>Search</p>
-            </button>
+            <input type="text" placeholder="Search..." id="mySearch" v-model="searchProduct">
           <div class="dropdown-center">
             <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               Filter:
@@ -18,7 +15,7 @@
       </div>
         <slot name="products">
             <section>
-                    <div class="row" v-for="product in products()" :key="product.prodID">
+                    <div class="row" v-for="product in searchProducts()" :key="product.prodID">
                         <div class="card mt-5" style="width: 18rem;">
                             <img :src="product.prodURL" class="card-img-top">
                             <div class="card-body">
@@ -41,12 +38,28 @@
 </template>
 <script>
 export default {
+    data() {
+        return {
+        searchProduct:''
+        }
+  },
     methods: {
         getProducts(){
             this.$store.dispatch('getProducts');
         },
         products() {
             return this.$store.state.products;
+        },
+    },
+    computed:{
+        searchProducts() {
+            if (this.searchProduct) {
+                return this.$store.state.products.filter((product) => {
+                    return this.product.every(s => product.prodName.includes(s))
+                })
+            } else {
+                return this.product;
+            }
         }
     },
     mounted() {
