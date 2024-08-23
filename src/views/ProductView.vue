@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="row" v-for="product in getProducts()" :key="product.prodID">
+        <div class="row" v-for="product in products()" :key="product.prodID">
             <div class="card mt-5" style="width:18rem">
                 <img :src="product.prodURL" class="card-img-top">
                 <div class="card-body">
@@ -24,7 +24,7 @@ import route from 'route'
 export default {
     methods: {
         getProducts(){
-            this.$store.dispatch('getProducts');
+            this.$store.dispatch('getProduct');
         },
         products() {
             return this.$store.state.products;
