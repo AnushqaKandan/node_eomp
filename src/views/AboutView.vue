@@ -61,7 +61,7 @@
   .card:hover{
     cursor: pointer;
     background:#1479EA;
-    transform:scale(1.0,2);
-    box-shadow:10px 10px 10px rgb(200,220,280,0.8);
+    transform:scale(1.0.9);
+    box-shadow:10px 10px 10px #046de6ba;
   }
 </style>
