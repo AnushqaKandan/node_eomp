@@ -1,5 +1,5 @@
 <template>
-    <div v-if="products()">
+    <div v-if="products()" class="mb-5">
         <CardComp>
             <template #products></template>
         </CardComp>

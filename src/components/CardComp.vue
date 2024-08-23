@@ -2,41 +2,21 @@
     <div>
         <div class="d-flex justify-content-center mt-4 gap-3" id="filter" >
             <input type="text" placeholder="Search..." id="mySearch" v-model="searchQuery">
-          <!-- <div class="dropdown-center">
-            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Filter:
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" @click="filterProducts">Airpods</a></li>
-              <li><a class="dropdown-item" @click="filterProducts">Smart Watches</a></li>
-              <li><a class="dropdown-item" @click="filterProducts">Laptops</a></li>
-              <li><a class="dropdown-item" @click="filterProducts">Consoles</a></li>
-              <li><a class="dropdown-item" @click="filterProducts">VR sets</a></li>
-              <li><a class="dropdown-item" @click="filterProducts">Headphones</a></li>
-            </ul>
-          </div> -->
           <select v-model="searchProduct">
-            <option>Airpods</option>
-            <option>Smart Watches</option>
-            <option>Laptops</option>
-            <option>Consoles</option>
-            <option>VR sets</option>
-            <option>Headphones</option>
+            <option value="" class="text-center">Filter:</option>
+            <option value="" >All Categories</option>
+            <option value="Airpods">Airpods</option>
+            <option value="Smart Watches">Smart Watches</option>
+            <option value="Laptops">Laptops</option>
+            <option value="Consoles">Consoles</option>
+            <option value="VR sets">VR sets</option>
+            <option value="Headphones">Headphones</option>
           </select>
-          <div class="dropdown-center">
-            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Sort:
-            </button>
-            <ul class="dropdown-menu" >
-              <li><a class="dropdown-item" href="#">Price:Low-High</a></li>
-              <li><a class="dropdown-item" href="#">Price:High-Low</a></li>
-            </ul>
-          </div>
       </div>
         <slot name="products">
             <section>
                     <div class="row" v-for="product in filterProducts || sortPrice" :key="product.prodID">
-                        <div class="card mt-5" style="width: 18rem;">
+                        <div class="card mt-5" style="width:18rem">
                             <img :src="product.prodURL" class="card-img-top">
                             <div class="card-body">
                                 <div class="prodName">
@@ -46,9 +26,8 @@
                                 <div>
                                     <p class="card-text">Price: R{{product.amount}}</p>
                                 </div>
-                                <div class="d-flex justify-content-between mt-2 align-content-end">
-                                    <router-link to="/product" class="btn mx-2">View More</router-link>   
-                                    <a href="#" class="btn">Cart</a>
+                                <div class="d-flex justify-content-center mt-2 align-content-end">
+                                    <router-link to="/product" class="btn text-center">View More</router-link> 
                                 </div>
                             </div>
                         </div>
@@ -77,7 +56,7 @@ export default {
         filterProducts() {
             return this.$store.state.products.filter(product => {
             return product.prodName.toLowerCase().includes(this.searchQuery) &&
-                (this.searchProduct === '' || product.pro === this.searchProduct)
+                (this.searchProduct === '' || product.category === this.searchProduct)
             })
         },
         // searchProd() {
@@ -143,6 +122,14 @@ export default {
     #filter input{
         width:15vw;
         border-radius:15px;
+    }
+    select{
+        border-radius:15px;
+        background: #1479EA;
+        transition: 1s;
+    }
+    select:hover{
+        cursor: pointer;
     }
     h4{
         color:transparent;
