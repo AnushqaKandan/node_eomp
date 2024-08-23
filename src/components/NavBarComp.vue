@@ -1,8 +1,7 @@
 <template>   
     <nav class="navbar navbar-expand-lg shadow">
-                <div class="container-fluid">
-                    <!-- <img src="https://c0dingforfun.github.io/portfolioimg/Images/Logo/Logo.png" alt="My Logo" loading="lazy"> -->
-                     LOGO
+                <div class="container-fluid" id="nav">
+                    <router-link to="/"><img src="https://c0dingforfun.github.io/node-images/Images/Logo/Logo.png" class="logo" alt="My Logo" loading="lazy"></router-link>
                     <button class="navbar-toggler mx-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">                    
                       <span class="text-white p-2" style="font-size:30px;">&#9776;</span>                      
                     </button>
@@ -55,7 +54,10 @@ export default {
         color:#1479EA;
         text-shadow:4px 4px #67acd1;
     }
-
+    #nav .logo{
+      width:140px;
+      height:120px;
+    }
     nav img{
       width:50px;
       height:50px;
