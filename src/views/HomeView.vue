@@ -97,7 +97,7 @@
   <section class="banner mt-5">
     <div class="row">
       <div>
-        <img src="https://c0dingforfun.github.io/node-images/Images/Home/Carousel/Headphone.png" alt="">
+        <img src="https://anushqakandan.github.io/Node_images/Smart4.png">
       </div>
       <div>
 
