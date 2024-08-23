@@ -69,7 +69,7 @@ class Products{
         SET ?
         WHERE prodID = ${req.params.id}
         `
-        db.query(strQry, [data], (err) => {
+        db.query(strQry, [req.body], (err) => {
             if(err) throw new Error('Unable to update a product')
                 res.json({
             status: res.statusCode,
