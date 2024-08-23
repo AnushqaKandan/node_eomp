@@ -94,7 +94,7 @@
       </div>
     </div>
   </section>
-  <section class="banner mt-5">
+  <section class="banner mt-5 my-auto">
     <div class="row b">
       <div class="col">
         <img src="https://anushqakandan.github.io/Node_images/Smart4.png">
@@ -219,18 +219,19 @@ a:hover {
       border-radius:20px;
       display:flex;
       justify-content: space-between;
-      align-items: center;
+      /* align-items: center; */
   }
   .banner img{
     object-fit: contain;
-    height:30vh;
+    height:33vh;
   }
   .b{
     display: flex;
     align-items: center;
     width:97vw;
     height:15vh;
-    color:aliceblue
+    color:aliceblue;
+    /* margin:5px; */
   }
   .service{
     width:95vw;
