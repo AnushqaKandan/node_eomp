@@ -17,16 +17,16 @@
                             <router-link class="nav-link" aria-current="page" to="/"><i class="las la-home"></i>Home</router-link>
                           </li>
                           <li class="nav-item">
-                            <router-link class="nav-link" to="/about"><i class="las la-users"></i>About</router-link>
+                            <router-link class="nav-link" to="/about" aria-current="page"><i class="las la-users"></i>About</router-link>
                           </li>
                           <li class="nav-item">
-                            <router-link class="nav-link" to="/products"><i class="las la-store-alt"></i>Products</router-link>
+                            <router-link class="nav-link" to="/products" aria-current="page"><i class="las la-store-alt"></i>Products</router-link>
                           </li>
                           <li class="nav-item">
-                            <router-link class="nav-link" to="/admin"><i class="las la-user-cog"></i>Admin</router-link>
+                            <router-link class="nav-link" to="/admin" aria-current="page"><i class="las la-user-cog"></i>Admin</router-link>
                           </li> 
                           <li class="nav-item">
-                            <router-link class="nav-link" to="/contact"><i class="las la-phone-square"></i>Contact</router-link>
+                            <router-link class="nav-link" to="/contact" aria-current="page"><i class="las la-phone-square"></i>Contact</router-link>
                           </li>
                         </ul>                    
                       </div>
@@ -55,9 +55,7 @@ export default {
         color:#1479EA;
         text-shadow:4px 4px #67acd1;
     }
-    nav router-link.active{
-      color:#1479EA;
-    }
+
     nav img{
       width:50px;
       height:50px;
