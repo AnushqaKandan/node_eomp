@@ -14,7 +14,7 @@ export default {
         },
     },
     mounted() {
-        this.getProducts();
+        this.getProducts(route.params.id);
     },
 }
 </script>

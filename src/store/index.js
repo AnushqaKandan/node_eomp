@@ -60,20 +60,6 @@ export default createStore({
         })
       }
     },
-    // async getProducts ({commit}) {
-    //   try {
-    //     let {data} = await axios.get(`${apiURL}products`);
-    //     console.log();
-    //       commit('setProducts',data.results)
-    //   }
-    //   catch (error) {
-    //     toast("There has been an error", {
-    //       "theme": "dark",
-    //       "type": "error",
-    //       "dangerouslyHTMLString": true
-    //     })     
-    //   }
-    // },
     async getUsers({ commit }) {
       try {
         let { result } = await (await axios.get(`${apiURL}users`)).data;
