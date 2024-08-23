@@ -25,6 +25,9 @@
                           <li class="nav-item">
                             <router-link class="nav-link" to="/contact"><i class="las la-phone-square"></i>Contact</router-link>
                           </li>                     
+                          <li class="nav-item">
+                            <router-link class="nav-link" to="/admin"><i class="las la-user-cog"></i>Admin</router-link>
+                          </li>                     
                         </ul>                    
                       </div>
                     </div>

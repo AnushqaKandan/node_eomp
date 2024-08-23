@@ -97,16 +97,23 @@
   <section class="banner mt-5">
     <div class="row">
       <div>
-
+        <!-- <img src="https://c0dingforfun.github.io/node-images/Images/Home/Carousel/Headphone.png" alt=""> -->
       </div>
       <div>
 
       </div>
     </div>
   </section>
-  <section class="mt-5">
-    <div v-for="news in getData()" :key="news">
-      {{ news.description }}
+  <section class="mt-5 news">
+    <div class="row" v-for="news in news()" :key="news">
+        <div class="card mt-5" style="width:18rem">
+          <img :src="news.image" class="card-img-top">
+        <div class="card-body">
+          <div>
+            <p class="card-text">{{ news.description }}</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -119,6 +126,9 @@ export default {
     },
     carousel(){
       return this.$store.state.carousel
+    },
+    news(){
+      return this.$store.state.news
     }
   },
   mounted() {
@@ -142,8 +152,7 @@ export default {
   }
   .carousel-item img{
     object-fit:contain;
-    height:50vh;
-    /* margin-right:20px; */
+    height:40vh;
   }
   .slider{
     margin-top:8vh;
@@ -201,43 +210,9 @@ a:hover {
   box-shadow: inset 0px 0px 25px #1479EA;
   color:white;
 }
-  .categories{
-    display:flex;
-    justify-content: center;
-  }
-  #one{
-    height:20vh;
-    background: grey;
-    border-radius:30px;
-  }
-  #two{
-    height:20vh;
-    background: grey;
-    border-radius:30px;
-  }
-  #three{
-    height:20vh;
-    background: grey;
-    border-radius:30px;
-  }
-  #four{
-    height:20vh;
-    background: grey;
-    border-radius:30px;
-  }
-  #five{
-    height:20vh;
-    background: grey;
-    border-radius:30px;
-  }
-  #six{
-    height:20vh;
-    background: grey;
-    border-radius:30px;
-  }
   .banner{
       margin:auto;
-      background:rgb(26, 26, 26);
+      background:#1479EA;
       width:98vw;
       height:300px;
       border-radius:20px
@@ -260,5 +235,14 @@ a:hover {
   .service .meh{
     width:90vw;
   }
-
+  .news{
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    place-items: center;
+    margin:auto;
+  }
+  .news img{
+    object-fit: fill;
+    height: 10vh;
+  } 
 </style>
