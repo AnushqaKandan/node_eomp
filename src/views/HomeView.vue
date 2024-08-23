@@ -97,7 +97,7 @@
   <section class="banner mt-5">
     <div class="row">
       <div>
-        <!-- <img src="https://c0dingforfun.github.io/node-images/Images/Home/Carousel/Headphone.png" alt=""> -->
+        <img src="https://c0dingforfun.github.io/node-images/Images/Home/Carousel/Headphone.png" alt="">
       </div>
       <div>
 
@@ -215,8 +215,15 @@ a:hover {
       margin:auto;
       background:#1479EA;
       width:98vw;
-      height:300px;
-      border-radius:20px
+      height:35vh;
+      border-radius:20px;
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  .banner img{
+    object-fit: contain;
+    height:10vh;
   }
   .service{
     width:95vw;
