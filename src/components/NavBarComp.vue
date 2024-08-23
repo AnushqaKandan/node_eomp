@@ -55,6 +55,9 @@ export default {
         color:#1479EA;
         text-shadow:4px 4px #67acd1;
     }
+    nav router-link.active{
+      color:#1479EA;
+    }
     nav img{
       width:50px;
       height:50px;
