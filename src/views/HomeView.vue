@@ -95,12 +95,12 @@
     </div>
   </section>
   <section class="banner mt-5">
-    <div class="row">
-      <div>
+    <div class="row b">
+      <div class="col">
         <img src="https://anushqakandan.github.io/Node_images/Smart4.png">
       </div>
-      <div>
-
+      <div class="col d-flex align-content-center">
+        <h1>Store in the loop of time.</h1>
       </div>
     </div>
   </section>
@@ -223,7 +223,14 @@ a:hover {
   }
   .banner img{
     object-fit: contain;
-    height:10vh;
+    height:30vh;
+  }
+  .b{
+    display: flex;
+    align-items: center;
+    width:97vw;
+    height:15vh;
+    color:aliceblue
   }
   .service{
     width:95vw;
@@ -258,5 +265,8 @@ a:hover {
     border: none;
     background: none;
     height:70vh;
+  }
+  h1{
+    font-size:5vw;
   }
 </style>
