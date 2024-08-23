@@ -104,7 +104,8 @@
       </div>
     </div>
   </section>
-  <section class="mt-5 news">
+  <h2 class="text-center mt-2">Recent News</h2>
+  <section class="mt-2 mb-2 news">
     <div class="row" v-for="news in news()" :key="news">
         <div class="card mt-5" style="width:18rem">
           <img :src="news.image" class="card-img-top">
@@ -240,9 +241,15 @@ a:hover {
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     place-items: center;
     margin:auto;
+    height:80vh;
   }
   .news img{
-    object-fit: fill;
-    height: 10vh;
+    object-fit:cover;
+    height: 40vh;
   } 
+  .card{
+    border: none;
+    background: none;
+    height:70vh;
+  }
 </style>
