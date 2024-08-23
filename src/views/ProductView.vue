@@ -26,6 +26,7 @@
 </template>
 
 <script >
+import SpinnerComp from '@/components/SpinnerComp.vue';
 export default{
     methods: {
         getProduct(){
@@ -38,6 +39,9 @@ export default{
     mounted() {
         this.getProduct();
     },
+    components:{
+        SpinnerComp
+    }
 }
 </script>
 <style scoped>
