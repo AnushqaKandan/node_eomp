@@ -6,7 +6,7 @@
                     <button class="navbar-toggler mx-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">                    
                       <span class="text-white p-2" style="font-size:30px;">&#9776;</span>                      
                     </button>
-                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="width:50%;background-color: rgb(0,0,0,0.8);">
+                    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel" style="width:50%;background-color: rgb(200,220,280,0.8);">
                       <div class="offcanvas-header">
                         <h1>MENU</h1>
                         <button type="button" class="btn-close bg-white pt-2" data-bs-dismiss="offcanvas" aria-label="Close" ></button>
