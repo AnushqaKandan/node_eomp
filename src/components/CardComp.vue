@@ -1,13 +1,33 @@
 <template>
     <div>
         <div class="d-flex justify-content-center mt-4 gap-3" id="filter" >
-            <input type="text" placeholder="Search..." id="mySearch" v-model="searchProduct">
-          <div class="dropdown-center">
+            <input type="text" placeholder="Search..." id="mySearch" v-model="searchQuery">
+          <!-- <div class="dropdown-center">
             <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
               Filter:
             </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" @click="filterProducts">Airpods</a></li>
+              <li><a class="dropdown-item" @click="filterProducts">Smart Watches</a></li>
+              <li><a class="dropdown-item" @click="filterProducts">Laptops</a></li>
+              <li><a class="dropdown-item" @click="filterProducts">Consoles</a></li>
+              <li><a class="dropdown-item" @click="filterProducts">VR sets</a></li>
+              <li><a class="dropdown-item" @click="filterProducts">Headphones</a></li>
+            </ul>
+          </div> -->
+          <select v-model="searchProduct">
+            <option>Airpods</option>
+            <option>Smart Watches</option>
+            <option>Laptops</option>
+            <option>Consoles</option>
+            <option>VR sets</option>
+            <option>Headphones</option>
+          </select>
+          <div class="dropdown-center">
+            <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Sort:
+            </button>
             <ul class="dropdown-menu" >
-              <li><a class="dropdown-item" href="#">Category</a></li>
               <li><a class="dropdown-item" href="#">Price:Low-High</a></li>
               <li><a class="dropdown-item" href="#">Price:High-Low</a></li>
             </ul>
@@ -15,12 +35,13 @@
       </div>
         <slot name="products">
             <section>
-                    <div class="row" v-for="product in searchProducts()" :key="product.prodID">
+                    <div class="row" v-for="product in filterProducts || sortPrice" :key="product.prodID">
                         <div class="card mt-5" style="width: 18rem;">
                             <img :src="product.prodURL" class="card-img-top">
                             <div class="card-body">
                                 <div class="prodName">
                                     <h5 class="card-title">{{product.prodName}}</h5>
+                                    <h4>{{ product.category }}</h4>
                                 </div>
                                 <div>
                                     <p class="card-text">Price: R{{product.amount}}</p>
@@ -40,7 +61,8 @@
 export default {
     data() {
         return {
-        searchProduct:''
+        searchProduct:'',
+        searchQuery:''
         }
   },
     methods: {
@@ -51,14 +73,25 @@ export default {
             return this.$store.state.products;
         },
     },
-    computed:{
-        searchProducts() {
-            if (this.searchProduct) {
-                return this.products().filter((myProduct) => {
-                    return this.myProduct.every(s => myProduct.prodName.includes(s))
-                })
-            } else {
-                return this.myProduct;
+    computed: {
+        filterProducts() {
+            return this.$store.state.products.filter(product => {
+            return product.prodName.toLowerCase().includes(this.searchQuery) &&
+                (this.searchProduct === '' || product.pro === this.searchProduct)
+            })
+        },
+        // searchProd() {
+        //     let tech = this.$store.state.products;
+        //     let find = this.searchProduct;
+        //     let found = tech.filter(prod => {
+        //         return prod.prodName.toLowerCase().includes(find.toLowerCase()) || prod.category.toLowerCase().includes(find.toLowerCase());
+        //     });
+        //     return found
+        // },
+        sortPrice() {
+            let unsorted = this.$store.state.products
+            if (unsorted){
+                unsorted.sort((a, b) => a.amount - b.amount)
             }
         }
     },
@@ -110,5 +143,8 @@ export default {
     #filter input{
         width:15vw;
         border-radius:15px;
+    }
+    h4{
+        color:transparent;
     }
 </style>

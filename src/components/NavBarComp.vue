@@ -42,10 +42,10 @@ export default {
     }
     nav a {
         font-weight: bold;
-        font-size:22px;
+        font-size:18px;
         color:#696969;
         text-decoration: none;
-        font-weight: 600;
+        font-weight: 200;
         transition: 1s;
     }
     nav a:hover{
