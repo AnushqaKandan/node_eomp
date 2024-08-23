@@ -79,7 +79,7 @@ class Products{
       } catch(e) {
         res.json({
             status: 400,
-            msg: e.message
+            err: e.message
         })
       }
      }
