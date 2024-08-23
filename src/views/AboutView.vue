@@ -1,9 +1,5 @@
 <template>
-  <div class="about">
-    <div class="row">
-      <div class="col-lg-6 col-md-6 col-sm-12" id="about">
-
-      </div>
+  <div class="about" id="about">
       <div class="col-lg-6 col-md-6 col-sm-12">
         <div class="text row">
           <div class="col">
@@ -13,20 +9,17 @@
         </div>
       </div>
     </div>
-  </div>
 </template>
 <style scoped>
-  .about {
+  #about{
     display:flex;
     justify-content: center;
     align-items: center;
-  }
-  #about{
-    
     background-image: url('https://c0dingforfun.github.io/node-images/Images/About/about.gif');
     background-size: cover;
-    width:50vw;
-    height:80vh;
+    width:100vw;
+    height:60vh;
+    backdrop-filter: blur(2px);
   }
   .text{
     display:flex;
