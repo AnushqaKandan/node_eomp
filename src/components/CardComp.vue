@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="d-flex justify-content-center mt-4 gap-3" id="filter">
+        <div class="d-flex justify-content-center mt-4 gap-3" id="filter" >
             <input type="text" placeholder="Search..." id="mySearch" v-model="searchProduct">
           <div class="dropdown-center">
             <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -54,11 +54,11 @@ export default {
     computed:{
         searchProducts() {
             if (this.searchProduct) {
-                return this.$store.state.products.filter((product) => {
-                    return this.product.every(s => product.prodName.includes(s))
+                return this.products().filter((myProduct) => {
+                    return this.myProduct.every(s => myProduct.prodName.includes(s))
                 })
             } else {
-                return this.product;
+                return this.myProduct;
             }
         }
     },
