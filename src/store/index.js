@@ -2,7 +2,6 @@ import { createStore } from 'vuex';
 import axios from 'axios';
 import { toast } from 'vue3-toastify';
 import "vue3-toastify/dist/index.css";
-// import route from 'route'
 const apiURL = 'https://node-eomp-u5mv.onrender.com/'
 export default createStore({
   state: {
@@ -10,7 +9,8 @@ export default createStore({
     carousel:null,
     news:null,
     users:null,
-    user:null
+    user:null,
+    product:null
   },
   getters: {
   },
@@ -29,6 +29,9 @@ export default createStore({
     },
     setUser(state, payload){
       state.user = payload;
+    },
+    setProduct(state, payload){
+      state.product = payload;
     }
   },
   actions: {

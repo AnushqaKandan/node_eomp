@@ -23,14 +23,7 @@
         </div>
     </div>
 </template>
-
-
-
-
-NEW
-
-11:09
-<template>
+<!-- <template>
     <div class="container-fluid retro-container">
         <div class="row">
             <h2 class="display-2 retro-heading">Product Details</h2>
@@ -54,7 +47,7 @@ NEW
             <Spinner/>
         </div>
     </div>
-</template>
+</template> -->
 <script setup>
 import { useStore } from 'vuex'
 import { computed, onMounted } from 'vue'
