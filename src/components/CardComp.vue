@@ -15,7 +15,7 @@
       </div>
         <slot name="products">
             <section>
-                    <div class="row" v-for="product in filterProducts || sortPrice" :key="product.prodID">
+                    <div class="row" v-for="product in filterProducts" :key="product.prodID">
                         <div class="card mt-5" style="width:18rem">
                             <img :src="product.prodURL" class="card-img-top">
                             <div class="card-body">
@@ -59,20 +59,6 @@ export default {
                 (this.searchProduct === '' || product.category === this.searchProduct)
             })
         },
-        // searchProd() {
-        //     let tech = this.$store.state.products;
-        //     let find = this.searchProduct;
-        //     let found = tech.filter(prod => {
-        //         return prod.prodName.toLowerCase().includes(find.toLowerCase()) || prod.category.toLowerCase().includes(find.toLowerCase());
-        //     });
-        //     return found
-        // },
-        sortPrice() {
-            let unsorted = this.$store.state.products
-            if (unsorted){
-                unsorted.sort((a, b) => a.amount - b.amount)
-            }
-        }
     },
     mounted() {
         this.getProducts();
