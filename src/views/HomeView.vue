@@ -1,9 +1,9 @@
 <template>
   <section>
       <div id="carouselExample" class="carousel slide">
-        <div class="carousel-inner" >
-          <div class="carousel-item" v-for="(slide,index) in carousel()" :key="index" :class="{'active':index==0}">
-             <div class="slider row">
+        <div class="carousel-inner">
+          <div class="carousel-item " v-for="(slide,index) in carousel()" :key="index" :class="{'active':index==0}">
+             <div class="slider row ">
               <div class="col-lg-1 col-md-1 col-sm-12"></div>
                 <div class="col-lg-5 col-md-5 col-sm-12">
                   <div>
@@ -35,30 +35,6 @@
         </button>
       </div>
 
-  </section>
-  <section class="mt-5">
-      <div class="row categories">
-        <div class="col-lg-3 col-md-6 col-sm-12 mx-1 " id="one">
-
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-12 mx-1" id="two">
-
-        </div>
-        <div class="col-lg-5 col-md-12 mx-1 col-sm-12 mx-1" id="three">
-
-        </div>
-      </div>
-      <div class="row categories mt-2">
-        <div class="col-lg-5 col-md-12 col-sm-12 mx-1" id="four">
-
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-12 mx-1" id="five">
-
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-12 mx-1" id="six">
-
-        </div>
-      </div>
   </section>
   <section class="service">
     <div class="row mt-5 meh">
@@ -157,12 +133,17 @@ export default {
     height:auto;
   }
   #carouselExample{
-    width: 100vw;
+    width: 98vw;
     height:500px;
+    margin:auto;
+    border-radius: 10px;
+    border:groove 2px #1479EA;
+
   }
   .carousel-item img{
     object-fit:contain;
-    height:350px;
+    height:50vh;
+    /* margin-right:20px; */
   }
   .slider{
     margin-top:8vh;
@@ -172,11 +153,12 @@ export default {
   }
   .slider h1{
     z-index:0;
-    font-size:10vw;
+    font-size:7vw;
   }
   a {
   position: relative;
   height: 3.5em;
+  padding:0.3em;
   border: 3px ridge #149CEA;
   outline: none;
   background-color: transparent;
