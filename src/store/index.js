@@ -2,9 +2,7 @@ import { createStore } from 'vuex';
 import axios from 'axios';
 import { toast } from 'vue3-toastify';
 import "vue3-toastify/dist/index.css";
-
 const apiURL = 'https://node-eomp-u5mv.onrender.com/'
-
 export default createStore({
   state: {
     products:null,
@@ -38,9 +36,9 @@ export default createStore({
         let {data} = await axios.get('https://c0dingforfun.github.io/node-json/api/data.json')
         console.log(data);
         let {carousel,news} = data
-        commit('setCarousel', carousel)  
-        commit('setNews', news)   
-      } 
+        commit('setCarousel', carousel)
+        commit('setNews', news)
+      }
       catch (error) {
         toast("There has been an error", {
           "theme": "dark",
@@ -59,9 +57,23 @@ export default createStore({
           "theme": "dark",
           "type": "error",
           "dangerouslyHTMLString": true
-        })      
+        })
       }
     },
+    // async getProducts ({commit}) {
+    //   try {
+    //     let {data} = await axios.get(`${apiURL}products`);
+    //     console.log();
+    //       commit('setProducts',data.results)
+    //   }
+    //   catch (error) {
+    //     toast("There has been an error", {
+    //       "theme": "dark",
+    //       "type": "error",
+    //       "dangerouslyHTMLString": true
+    //     })     
+    //   }
+    // },
     async getUsers({ commit }) {
       try {
         let { result } = await (await axios.get(`${apiURL}users`)).data;
@@ -80,10 +92,10 @@ export default createStore({
     },
     async register(context, payload) {
       try {
-        const {message} = await (await axios.post(`${apiURL}users/register`, payload)).data
-        if (message) {
+        const {msg} = await (await axios.post(`${apiURL}users/register`, payload)).data
+        if (msg) {
           context.dispatch('getUsers')
-          toast.success(`${message}`, {
+          toast.success(msg, {
             autoClose: 2000,
             position: toast.POSITION.BOTTOM_CENTER
           })
@@ -102,6 +114,10 @@ export default createStore({
         const { msg, err } = await (await axios.patch(`${apiURL}users/${payload.id}`, payload.data)).data
         if (msg) {
           context.dispatch('getUsers')
+          toast.success(msg, {
+            autoClose: 2000,
+            position: toast.POSITION.BOTTOM_CENTER
+          })
         } else {
           toast.error(`${err}`, {
             autoClose: 2000,
@@ -120,7 +136,7 @@ export default createStore({
         const { msg } = await (await axios.delete(`${apiURL}users/${id}`)).data
         if (msg) {
           context.dispatch('getUsers')
-          toast.success(`${msg}`, {
+          toast.success(msg, {
             autoClose: 2000,
             position: toast.POSITION.BOTTOM_CENTER
           })
@@ -134,10 +150,10 @@ export default createStore({
     },
     async addProduct(context, payload) {
       try {
-        const {message} = await (await axios.post(`${apiURL}products/add`, payload)).data
-        if (message) {
+        const {msg} = await (await axios.post(`${apiURL}products/add`, payload)).data
+        if (msg) {
           context.dispatch('getProducts')
-          toast.success(`${message}`, {
+          toast.success(msg, {
             autoClose: 2000,
             position: toast.POSITION.BOTTOM_CENTER
           })
@@ -151,30 +167,34 @@ export default createStore({
       }
     },
     async updateProduct(context, payload) {
-      console.log(payload.data);
-      try {
-        const { msg, err } = await (await axios.patch(`${apiURL}product/${payload.id}`, payload.data)).data
-        if (msg) {
+      try{
+        console.log(payload);
+        let {msg, err}= await (await axios.patch(`${apiURL}products/${payload.prodID}`, payload)).data
+        if(msg) {
           context.dispatch('getProducts')
-        } else {
-          toast.error(`${err}`, {
+          toast?.success(msg, {
+            autoClose: 2000,
+            position: toast.POSITION.BOTTOM_CENTER
+          })
+        }else {
+          toast?.error(err, {
+                  autoClose: 2000,
+                  position: toast.POSITION.BOTTOM_CENTER
+                })
+              }
+        }catch(e){
+          toast?.error(e.message, {
             autoClose: 2000,
             position: toast.POSITION.BOTTOM_CENTER
           })
         }
-      } catch (e) {
-        toast?.error(`${e.msg}`, {
-          autoClose: 2000,
-          position: toast.POSITION.BOTTOM_CENTER
-        })
-      }
-    },
+        },
     async deleteProduct(context, id) {
       try {
         const { msg } = await (await axios.delete(`${apiURL}products/${id}`)).data
         if (msg) {
           context.dispatch('getProducts')
-          toast.success(`${msg}`, {
+          toast?.success(msg, {
             autoClose: 2000,
             position: toast.POSITION.BOTTOM_CENTER
           })

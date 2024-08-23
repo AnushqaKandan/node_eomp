@@ -33,6 +33,7 @@
                   class="form-control w-50 mx-auto"
                   placeholder="first name"
                   v-model="payload.firstName"
+                  required
                 />
               </div>
               <div class="mb-3">
@@ -41,6 +42,7 @@
                   class="form-control w-50 mx-auto"
                   placeholder="last name"
                   v-model="payload.lastName"
+                  required
                 />
               </div>
               <div class="mb-3">
@@ -49,6 +51,7 @@
                   class="form-control w-50 mx-auto"
                   placeholder="user age"
                   v-model="payload.userAge"
+                  required
                 />
               </div>
               <div class="mb-3">
@@ -57,6 +60,7 @@
                   class="form-control w-50 mx-auto"
                   placeholder="gender"
                   v-model="payload.Gender"
+                  required
                 />
               </div>
               <div class="mb-3">
@@ -65,6 +69,7 @@
                   class="form-control w-50 mx-auto"
                   placeholder="user role"
                   v-model="payload.userRole"
+                  required
                 />
               </div>
               <div class="mb-3">
@@ -73,6 +78,7 @@
                   class="form-control w-50 mx-auto"
                   placeholder="email address"
                   v-model="payload.emailAdd"
+                  required
                 />
               </div>
               <div class="mb-3">
@@ -81,6 +87,7 @@
                   class="form-control w-50 mx-auto"
                   placeholder="user password"
                   v-model="payload.userPass"
+                  required
                 />
               </div>
               <div class="mb-3">
@@ -89,6 +96,7 @@
                   class="form-control w-50 mx-auto"
                   placeholder="user profile"
                   v-model="payload.userProfile"
+                  required
                 />
               </div>
               <div class="modal-footer">
@@ -136,11 +144,11 @@
       async addingUser() {
         try {
           await this.$store.dispatch("register", this.payload);
-          location.reload()
         } catch (error) {
           console.error(error);
         }
       },
+
     },
   };
   </script>

@@ -109,7 +109,6 @@
        async addingProduct() {
         try {
           await this.$store.dispatch("addProduct", this.payload);
-          location.reload()
         } catch (error) {
           console.error(error);
         }
