@@ -1,5 +1,5 @@
 <template>   
-    <nav class="navbar navbar-expand-lg shadow">
+    <nav class="navbar navbar-expand-lg sticky-top shadow">
                 <div class="container-fluid" id="nav">
                     <router-link to="/"><img src="https://c0dingforfun.github.io/node-images/Images/Logo/Logo.png" class="logo" alt="My Logo" loading="lazy"></router-link>
                     <button class="navbar-toggler mx-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">                    
