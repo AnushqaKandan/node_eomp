@@ -5,14 +5,16 @@
         </CardComp>
     </div>
     <div v-else>
-        
+        <SpinnerComp/>
     </div>
 </template>
 <script>
 import CardComp from '@/components/CardComp.vue';
+import SpinnerComp from '@/components/SpinnerComp.vue';
 export default {
     components:{
-        CardComp
+        CardComp,
+        SpinnerComp
     },
     methods: {
         getProducts(){

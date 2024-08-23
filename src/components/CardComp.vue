@@ -62,8 +62,7 @@ export default {
         margin:auto;
     }
     .card{
-        height:360px;
-        margin-right:50px;
+        height:370px;
     }
     .card img{
         height:200px;
