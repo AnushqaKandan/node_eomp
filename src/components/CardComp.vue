@@ -25,7 +25,10 @@
                                 <div class="prodName">
                                     <h5 class="card-title">{{product.prodName}}</h5>
                                 </div>
-                                <div class="d-flex justify-content-between align-content-end">
+                                <div>
+                                    <p class="card-text">Price: R{{product.amount}}</p>
+                                </div>
+                                <div class="d-flex justify-content-between mt-2 align-content-end">
                                     <router-link to="/product" class="btn mx-2">View More</router-link>   
                                     <a href="#" class="btn">Cart</a>
                                 </div>
