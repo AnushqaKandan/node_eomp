@@ -33,6 +33,7 @@
                   class="form-control w-50 mx-auto"
                   placeholder="Product Name"
                   v-model="payload.prodName"
+                  required
                 />
               </div>
               <div class="mb-3">
@@ -41,6 +42,7 @@
                   class="form-control w-50 mx-auto"
                   placeholder="Product Quantity"
                   v-model="payload.quantity"
+                  required
                 />
               </div>
               <div class="mb-3">
@@ -49,6 +51,7 @@
                   class="form-control w-50 mx-auto"
                   placeholder="Product Amount"
                   v-model="payload.amount"
+                  required
                 />
               </div>
               <div class="mb-3">
@@ -57,6 +60,7 @@
                   class="form-control w-50 mx-auto"
                   placeholder="Product Category"
                   v-model="payload.category"
+                  required
                 />
               </div>
               <div class="mb-3">
@@ -65,6 +69,7 @@
                   class="form-control w-50 mx-auto"
                   placeholder="Product URL"
                   v-model="payload.prodURL"
+                  required
                 />
               </div>
               <div class="modal-footer">
@@ -77,7 +82,7 @@
                 </button>
                 <button
                   type="submit"
-                  @click.prevent="addingProduct"
+                  @click="addingProduct"
                   class="btn btn-success"
                   data-bs-dismiss="modal"
                 >
@@ -106,9 +111,21 @@
       };
     },
     methods: {
-       async addingProduct() {
+      //  async addingProduct() {
+      //   try {
+      //     await this.$store.dispatch("addProduct", this.payload);
+      //   } catch (error) {
+      //     console.error(error);
+      //   }
+      // },
+      async addingProduct() {
         try {
-          await this.$store.dispatch("addProduct", this.payload);
+          const inputs = this.payload.prodName === 0 || this.payload.quantity === 0 || this.payload.amount === 0 || this.payload.category === 0 || this.payload.prodURL === 0 
+          if(inputs){
+            alert("Please fill all the fields");
+          } else {
+            await this.$store.dispatch("addProduct", this.payload);
+          }
         } catch (error) {
           console.error(error);
         }

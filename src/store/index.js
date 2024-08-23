@@ -67,7 +67,9 @@ export default createStore({
     async getProduct ({commit},id) {
       try {
         let {data} = await axios.get(`${apiURL}products/${id}`);
-          commit('setProducts',data.results)
+        console.log(data);
+        
+          commit('setProduct',data.result)
       }
       catch (error) {
         toast("There has been an error", {

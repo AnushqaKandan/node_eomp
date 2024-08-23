@@ -15,6 +15,7 @@
       </div>
         <slot name="products">
             <section>
+                
                     <div class="row" v-for="product in filterProducts" :key="product.prodID">
                         <div class="card mt-5" style="width:18rem">
                             <img :src="product.prodURL" class="card-img-top">
@@ -27,7 +28,7 @@
                                     <p class="card-text">Price: R{{product.amount}}</p>
                                 </div>
                                 <div class="d-flex justify-content-center mt-2 align-content-end">
-                                    <router-link to="/product" class="btn text-center">View More</router-link> 
+                                    <router-link :to="{name:'product',params:{id:product.prodID}}" class="btn text-center">View More</router-link> 
                                 </div>
                             </div>
                         </div>

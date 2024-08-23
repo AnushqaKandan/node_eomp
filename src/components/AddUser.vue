@@ -109,7 +109,7 @@
                 </button>
                 <button
                   type="submit"
-                  @click.prevent="addingUser"
+                  @click="addingUser"
                   class="btn btn-secondary"
                   data-bs-dismiss="modal"
                 >
@@ -143,7 +143,12 @@
     methods: {
       async addingUser() {
         try {
-          await this.$store.dispatch("register", this.payload);
+          const inputs = this.payload.firstName.length === 0 || this.payload.lastName === 0 || this.payload.userAge === 0 || this.payload.Gender === 0 || this.payload.emailAdd === 0 || this.payload.userRole === 0 || this.payload.userPass === 0 || this.payload.userProfile === 0
+          if(inputs){
+            alert("Please fill all the fields");
+          } else {
+            await this.$store.dispatch("register", this.payload);
+          }
         } catch (error) {
           console.error(error);
         }
