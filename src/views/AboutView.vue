@@ -3,11 +3,15 @@
       <div class="col-lg-6 col-md-6 col-sm-12">
         <div class="text row">
           <div class="col">
-            <h1 class="text-white"><b>Our Story</b></h1>
+            <h1 class="text-white"><b>About Us</b></h1>
           </div>
-            <h5 class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure delectus sit quae ducimus illum possimus nulla alias est. Harum nisi odit quidem nemo iste ducimus inventore veritatis perspiciatis labore ullam.</h5>
+            <h5 class="text-white">At GeniTech Store, our vision is to empower individuals and businesses to harness the power of technology to achieve their goals and transform their lives. We believe that technology should be accessible, affordable, and easy to use, and we're committed to making that a reality.</h5>
         </div>
       </div>
+    </div>
+    <div class="mt-5 w-50 mx-auto">
+      <h2>Our Story</h2>
+      <h5>GeniTech Store was founded by a team of passionate tech enthusiasts who were frustrated with the lack of innovative and affordable technology solutions available in the market. We saw an opportunity to create a platform that would bridge the gap between technology and people, and provide a seamless shopping experience that would make technology accessible to everyone.</h5>
     </div>
     <div class="row story mt-5 mb-5">
       <div class="d-flex align-content-center">
