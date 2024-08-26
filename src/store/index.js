@@ -38,7 +38,7 @@ export default createStore({
     async getData({commit}){
       try {
         let {data} = await axios.get('https://c0dingforfun.github.io/node-json/api/data.json')
-        console.log(data);
+        // console.log(data);
         let {carousel,news} = data
         commit('setCarousel', carousel)
         commit('setNews', news)
@@ -67,7 +67,7 @@ export default createStore({
     async getProduct ({commit},id) {
       try {
         let {data} = await axios.get(`${apiURL}products/${id}`);
-        console.log(data);
+        // console.log(data);
         
           commit('setProduct',data.result)
       }

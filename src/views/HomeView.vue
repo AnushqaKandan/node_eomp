@@ -25,12 +25,12 @@
              </div>
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <button class="carousel-control-prev " type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon bg-dark" aria-hidden="true"></span>
           <span class="visually-hidden">Previous</span>
         </button>
         <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="carousel-control-next-icon bg-dark" aria-hidden="true"></span>
           <span class="visually-hidden">Next</span>
         </button>
       </div>
@@ -100,14 +100,14 @@
         <img src="https://anushqakandan.github.io/Node_images/Smart4.png">
       </div>
       <div class="col d-flex align-content-center">
-        <h1>Store in the loop of time.</h1>
+        <h1>It's time to upgrade.</h1>
       </div>
     </div>
   </section>
   <h2 class="text-center mt-2">Recent News</h2>
   <section class="mt-2 mb-2 news">
     <div class="row" v-for="news in news()" :key="news">
-        <div class="card mt-5" style="width:18rem">
+        <div class="card mt-5">
           <img :src="news.image" class="card-img-top">
         <div class="card-body">
           <div>
@@ -219,7 +219,6 @@ a:hover {
       border-radius:20px;
       display:flex;
       justify-content: space-between;
-      /* align-items: center; */
   }
   .banner img{
     object-fit: contain;
@@ -231,7 +230,6 @@ a:hover {
     width:97vw;
     height:15vh;
     color:aliceblue;
-    /* margin:5px; */
   }
   .service{
     width:95vw;
@@ -266,6 +264,7 @@ a:hover {
     border: none;
     background: none;
     height:70vh;
+    width:16rem;
   }
   h1{
     font-size:5vw;

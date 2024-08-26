@@ -40,7 +40,7 @@ export default {
 </script>
 <style scoped>
     nav {
-      background-color:transparent;
+      background: rgb(236, 233, 233);
     }
     nav a {
         font-weight: bold;
