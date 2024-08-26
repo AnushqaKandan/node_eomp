@@ -19,8 +19,9 @@
     </div>
     <div class="row story mt-5 mb-5">
       <div class="d-flex align-items-center justify-content-center">
+        <div class="col-lg-2 col-md-2 col-sm-12"></div>
         <div class="col-lg-6 col-md-6 col-sm-12">
-          <div class="card" style="width: 18rem;">
+          <div class="card">
             <img src="https://anushqakandan.github.io/All-images/Images/Anushqa04.jpg" class="card-img-top" alt="">
             <div class="card-body">
               <h5 class="card-title">Anushqa Kandan</h5>
@@ -29,7 +30,7 @@
           </div>
         </div>
         <div class="col-lg-6 col-md-6 col-sm-12">
-          <div class="card" style="width: 18rem;">
+          <div class="card">
             <img src="https://c0dingforfun.github.io/portfolioimg/Images/Me/Me.png" class="card-img-top" alt="">
             <div class="card-body">
               <h5 class="card-title">Gwiba Mabandla</h5>
@@ -53,11 +54,14 @@
 
   }
   .story{
-    width:90vw;
+    display:flex;
+    justify-content: center;
+    width:100vw;
     height:50vh;
     margin:auto;
   }
   .card {
+    width:18rem;
     height:300px;
     padding: 0.3em;
     border:groove 2px black;
@@ -69,7 +73,7 @@
   .card:hover{
     cursor: pointer;
     background:#1479EA;
-    transform:scale(1.0.9);
+    transform:scale(1.1);
     box-shadow:10px 10px 10px #046de6ba;
   }
 </style>
