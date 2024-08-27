@@ -19,8 +19,7 @@
     </div>
     <div class="row story mt-5 mb-5">
       <div class="d-flex align-items-center justify-content-center">
-        <div class="col-lg-2 col-md-2 col-sm-12"></div>
-        <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="col-lg-6 col-md-12 col-sm-12 d-flex justify-content-end mx-2">
           <div class="card">
             <img src="https://anushqakandan.github.io/All-images/Images/Anushqa04.jpg" class="card-img-top" alt="">
             <div class="card-body">
@@ -29,7 +28,7 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="col-lg-6 col-md-12 col-sm-12">
           <div class="card">
             <img src="https://c0dingforfun.github.io/portfolioimg/Images/Me/Me.png" class="card-img-top" alt="">
             <div class="card-body">
@@ -39,7 +38,6 @@
           </div>
         </div>  
       </div>
-      
     </div>
 </template>
 <style scoped>
@@ -61,7 +59,6 @@
     margin:auto;
   }
   .card {
-    width:18rem;
     height:300px;
     padding: 0.3em;
     border:groove 2px black;

@@ -5,17 +5,13 @@
           <select v-model="searchProduct">
             <option value="" class="text-center">Filter:</option>
             <option value="" >All Categories</option>
-            <option value="Airpods">Airpods</option>
-            <option value="Smart Watches">Smart Watches</option>
-            <option value="Laptops">Laptops</option>
-            <option value="Consoles">Consoles</option>
-            <option value="VR sets">VR sets</option>
-            <option value="Headphones">Headphones</option>
+            <option v-for="category in categories" :key="category" :value="category">
+                      {{ category }}
+                  </option>
           </select>
       </div>
         <slot name="products">
             <section>
-                
                     <div class="row" v-for="product in filterProducts" :key="product.prodID">
                         <div class="card mt-5" style="width:18rem">
                             <img :src="product.prodURL" class="card-img-top">
@@ -42,7 +38,8 @@ export default {
     data() {
         return {
         searchProduct:'',
-        searchQuery:''
+        searchQuery:'',
+        category:''
         }
   },
     methods: {
@@ -60,6 +57,11 @@ export default {
                 (this.searchProduct === '' || product.category === this.searchProduct)
             })
         },
+        if (category) {
+            this.searchProducts = searchProducts.filter(product =>
+                product.category === category.value
+            )
+        }
     },
     mounted() {
         this.getProducts();

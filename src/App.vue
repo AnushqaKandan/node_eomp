@@ -30,6 +30,15 @@ import FooterComp from './components/FooterComp.vue';
   font-family: "Oxygen", sans-serif;
   font-style: normal;
 }
+.card{
+  width:18rem;
+}
 
+@media screen and (max-width: 600px){
+  .card{
+    width:15rem;
+  }
+  
+}
 
 </style>

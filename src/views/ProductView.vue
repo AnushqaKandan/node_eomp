@@ -5,7 +5,7 @@
         </div>
         <div class="row my-2" v-if="product()">
             <div class="row center">
-                        <div class="card mt-5" style="width:18rem">
+                        <div class="card mt-5">
                             <img :src="$store.state.product.prodURL" class="card-img-top">
                             <div class="card-body">
                                 <div class="prodName">
