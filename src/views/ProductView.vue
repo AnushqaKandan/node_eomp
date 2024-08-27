@@ -1,5 +1,5 @@
 <template>
-    <div class="container-fluid ">
+    <div class="container-fluid mb-5">
         <div class="row">
             <h2 class="display-2">Product Details</h2>
         </div>
@@ -20,7 +20,7 @@
                     </div>
         </div>
         <div v-else>
-            <Spinner/>
+            <SpinnerComp/>
         </div>
     </div>
 </template>
