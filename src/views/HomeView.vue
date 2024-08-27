@@ -253,6 +253,7 @@ a:hover {
     display:grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     place-items: center;
+    width:100vw;
     margin:auto;
     height:80vh;
   }

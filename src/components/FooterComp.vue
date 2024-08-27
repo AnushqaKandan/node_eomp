@@ -30,8 +30,6 @@ export default {
         background-image: url('https://c0dingforfun.github.io/node-images/Images/Footer/background.jpg');
         background-size: cover;
         width:100vw;
-        height:25vh;
-        
     }
     .row{
         padding-top:10px;
@@ -56,4 +54,9 @@ export default {
         font-size:30px;
         padding:0.3em;
     }
+    @media screen and (max-width: 600px){
+        .footer{
+            height:35vh;
+        }
+}
 </style>

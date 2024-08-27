@@ -36,9 +36,9 @@ import FooterComp from './components/FooterComp.vue';
 
 @media screen and (max-width: 600px){
   .card{
-    width:15rem;
+    width:14rem;
+    margin:auto;
   }
-  
 }
 
 </style>

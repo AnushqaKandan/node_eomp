@@ -85,7 +85,8 @@ export default {
         height: 8vh;
     }
     .card a{
-        width: 20vw;
+        width: 25vw;
+        font-size:16pt;
         background:black;
         color:white;
         transition:1s;
